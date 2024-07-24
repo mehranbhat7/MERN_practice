@@ -1,6 +1,43 @@
-h1 {
-  text-align: center;
+ul.a {
+  list-style-type: circle;
 }
-p {
-  text-align: center;
+ol {
+  list-style-type: georgian;
+}
+
+th,
+td {
+  border: 2px solid black;
+  padding: 10px 30px;
+  background-color: rgb(83, 113, 140);
+  color: white;
+}
+th {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: blanchedalmond;
+  color: black;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+tr,
+td:hover {
+  background-color: rgb(129, 129, 200);
+}
+#bbb tr:nth-child(even) {
+  background-color: aqua;
+}
+
+a:link {
+  color: red;
+}
+a:visited {
+  color: pink;
+}
+a:hover {
+  color: black;
+}
+a:active {
+  color: aqua;
 }
