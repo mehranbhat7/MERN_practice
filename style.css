@@ -1,4 +1,4 @@
-ul.a {
+/* ul.a {
   list-style-type: circle;
 }
 ol {
@@ -40,4 +40,22 @@ a:hover {
 }
 a:active {
   color: aqua;
+} */
+
+.container {
+  border: 2px solid black;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: antiquewhite;
+}
+.box1 {
+  flex-grow: 1;
 }
