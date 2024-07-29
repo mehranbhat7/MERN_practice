@@ -12,8 +12,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div class="p-16 text-center mt-20">
+  <body class="bg-pink-200">
+    <div class="p-12 text-center mt-20">
       <div class="flex justify-evenly">
         <div>
           <p class="text-lg text-gray-500 font-bold">Text Color Picker</p>
@@ -51,7 +51,10 @@
         </div>
       </div>
       <div class="mt-14 flex items-center justify-center">
-        <canvas id="canvas" class="border-2 border-black w-4/5 cursor-cell">
+        <canvas
+          id="canvas"
+          class="border-2 border-black w-4/5 cursor-cell bg-white"
+        >
         </canvas>
       </div>
       <div class="flex justify-evenly mt-14">
@@ -64,10 +67,10 @@
         </button>
         <button
           type="button"
-          id="Save & download"
+          id="Save"
           class="btn btn-success w-40 cursor-pointer"
         >
-          Savw & Download
+          Save & Download
         </button>
         <button
           type="button"
@@ -78,5 +81,6 @@
         </button>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
