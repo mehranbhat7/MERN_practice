@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>signature App</title>
+    <title>Signature App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -40,34 +40,37 @@
             name=""
             id="fontsize"
           >
-            <option value="5px">5px</option>
-            <option value="10px">10px</option>
-            <option value="15px">15px</option>
-            <option value="20px">20px</option>
-            <option value="25px">25px</option>
-            <option value="30px">30px</option>
-            <option value="35px">35px</option>
+            <option value="1">1px</option>
+            <option value="2">2px</option>
+            <option value="3">3px</option>
+            <option value="4">4px</option>
+            <option value="5">5px</option>
+            <option value="10">10px</option>
+            <option value="15">15px</option>
+            <option value="20">20px</option>
+            <option value="25">25px</option>
+            <option value="30">30px</option>
+            <option value="35">35px</option>
           </select>
         </div>
       </div>
       <div class="mt-14 flex items-center justify-center">
         <canvas
           id="canvas"
-          class="border-2 border-black w-4/5 cursor-cell bg-white"
-        >
-        </canvas>
+          class="border-2 border-black w-4/5 cursor-cell"
+        ></canvas>
       </div>
       <div class="flex justify-evenly mt-14">
         <button
           type="button"
-          id="Clear"
+          id="clear"
           class="btn btn-danger w-40 cursor-pointer"
         >
           Clear
         </button>
         <button
           type="button"
-          id="Save"
+          id="save"
           class="btn btn-success w-40 cursor-pointer"
         >
           Save & Download
