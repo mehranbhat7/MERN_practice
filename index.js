@@ -185,3 +185,19 @@ switch (agee) {
   default:
     console.log("thats it");
 }
+
+for (let i = 0; i <= 10; i++) {
+  console.log(`2 * ${i} = ${2 * i}`);
+}
+
+let agge = 1;
+while (agge <= 0) {
+  console.log(`2 * ${agge} = ${2 * agge}`);
+  agge++;
+}
+
+let i = 4;
+do {
+  console.log(i);
+  i++;
+} while (i <= 1);
