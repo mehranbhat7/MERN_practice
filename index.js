@@ -101,9 +101,9 @@ var address = "nawakadal";
 var address = "lalbazar";
 console.log(address);
 
-// let name = "mehran";
-// let name = "ali";
-// console.log(name);
+let name = "mehran";
+let name = "ali";
+console.log(name);
 
 function user() {
   let age = 10;
@@ -135,3 +135,25 @@ let res = "mehran";
 console.log(res);
 res = Boolean(res);
 console.log(typeof res);
+
+let num = 24;
+console.log(num++);
+console.log(num++);
+console.log(num++);
+console.log(num++);
+console.log(num++);
+console.log(num++);
+console.log(++num);
+
+let a = 2;
+let b = 6;
+console.log(a === b);
+console.log(a != b);
+console.log(a > b);
+console.log(a < b);
+console.log(a >= b);
+console.log(a <= b);
+
+console.log(3 < 1 || 1 < 5);
+console.log(3 > 1 && 2 > 9);
+console.log(5 == 5 && 5 > 2);
