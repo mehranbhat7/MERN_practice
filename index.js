@@ -93,67 +93,95 @@
 
 // js practice MERN
 
-let katora1 = "Rajma dal";
-let katora2 = katora1;
-console.log(katora2);
+// let katora1 = "Rajma dal";
+// let katora2 = katora1;
+// console.log(katora2);
 
-var address = "nawakadal";
-var address = "lalbazar";
-console.log(address);
+// var address = "nawakadal";
+// var address = "lalbazar";
+// console.log(address);
 
-let name = "mehran";
-let name = "ali";
-console.log(name);
+// let name = "mehran";
+// let name = "ali";
+// console.log(name);
 
-function user() {
-  let age = 10;
-  console.log("hello");
+// function user() {
+//   let age = 10;
+//   console.log("hello");
+// }
+// user();
+// console.log(age);
+
+// let age = 23;
+// console.log(typeof age);
+
+// let name = "mehran";
+// console.log(typeof name);
+
+// let male = true;
+// console.log(typeof male);
+
+// let ress = null;
+// console.log(ress);
+
+// let eidi;
+// console.log(typeof eidi);
+
+// let num = "3" - null;
+// console.log(num);
+// console.log(typeof num);
+
+// let res = "mehran";
+// console.log(res);
+// res = Boolean(res);
+// console.log(typeof res);
+
+// let num = 24;
+// console.log(num++);
+// console.log(num++);
+// console.log(num++);
+// console.log(num++);
+// console.log(num++);
+// console.log(num++);
+// console.log(++num);
+
+// let a = 2;
+// let b = 6;
+// console.log(a === b);
+// console.log(a != b);
+// console.log(a > b);
+// console.log(a < b);
+// console.log(a >= b);
+// console.log(a <= b);
+
+// console.log(3 < 1 || 1 < 5);
+// console.log(3 > 1 && 2 > 9);
+// console.log(5 == 5 && 5 > 2);
+
+let age = 19;
+let name = "nabli";
+
+if (age >= 18) {
+  if ((name = "nabla")) {
+    console.log("suu yi pahalgam");
+  } else {
+    console.log("nabla ius absent");
+  }
+} else {
+  console.log("su behi gharrei");
 }
-user();
-console.log(age);
 
-let age = 23;
-console.log(typeof age);
-
-let name = "mehran";
-console.log(typeof name);
-
-let male = true;
-console.log(typeof male);
-
-let ress = null;
-console.log(ress);
-
-let eidi;
-console.log(typeof eidi);
-
-let num = "3" - null;
-console.log(num);
-console.log(typeof num);
-
-let res = "mehran";
-console.log(res);
-res = Boolean(res);
-console.log(typeof res);
-
-let num = 24;
-console.log(num++);
-console.log(num++);
-console.log(num++);
-console.log(num++);
-console.log(num++);
-console.log(num++);
-console.log(++num);
-
-let a = 2;
-let b = 6;
-console.log(a === b);
-console.log(a != b);
-console.log(a > b);
-console.log(a < b);
-console.log(a >= b);
-console.log(a <= b);
-
-console.log(3 < 1 || 1 < 5);
-console.log(3 > 1 && 2 > 9);
-console.log(5 == 5 && 5 > 2);
+let agee = 23;
+switch (agee) {
+  case 10:
+    console.log("your are is below 10");
+    break;
+  case 23:
+    console.log("your age is below 20");
+    break;
+  case 30:
+    console.log("your age is under 30");
+    break;
+  default:
+    console.log("thats it");
+}
