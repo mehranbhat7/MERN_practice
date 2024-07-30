@@ -158,46 +158,103 @@
 // console.log(3 > 1 && 2 > 9);
 // console.log(5 == 5 && 5 > 2);
 
-let age = 19;
-let name = "nabli";
+// let age = 19;
+// let name = "nabli";
 
-if (age >= 18) {
-  if ((name = "nabla")) {
-    console.log("suu yi pahalgam");
-  } else {
-    console.log("nabla ius absent");
-  }
-} else {
-  console.log("su behi gharrei");
+// if (age >= 18) {
+//   if ((name = "nabla")) {
+//     console.log("suu yi pahalgam");
+//   } else {
+//     console.log("nabla ius absent");
+//   }
+// } else {
+//   console.log("su behi gharrei");
+// }
+
+// let agee = 23;
+// switch (agee) {
+//   case 10:
+//     console.log("your are is below 10");
+//     break;
+//   case 23:
+//     console.log("your age is below 20");
+//     break;
+//   case 30:
+//     console.log("your age is under 30");
+//     break;
+//   default:
+//     console.log("thats it");
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`2 * ${i} = ${2 * i}`);
+// }
+
+// let agge = 1;
+// while (agge <= 0) {
+//   console.log(`2 * ${agge} = ${2 * agge}`);
+//   agge++;
+// }
+
+// let i = 4;
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 1);
+
+// function user() {}
+// for (let i = 0; i <= 10; i++) {
+//   console.log(user());
+// }
+
+// function xxy(a, b, c) {
+//   return a + b + c;
+// }
+// let j = 5;
+// let h = 6;
+// let res = xxy(j, h, 4);
+// console.log(res);
+
+// (function () {
+//   console.log("kaise ho");
+// })();
+
+// let userr = (a, b, c) => {
+//   return a + b + c;
+// };
+// console.log(userr(1, 2, 3));
+
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+nums.push(11);
+console.log(nums);
+
+let numss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numss.pop();
+console.log(numss);
+
+let numsss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numsss.shift();
+console.log(numsss);
+
+let numms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numms.unshift(0);
+console.log(numms);
+
+let nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+nnums.splice(0, 4, "mehraqn");
+console.log(nnums);
+
+let nuums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+nuums.slice(1, 5);
+console.log(nuums);
+
+let hi = [10, 20, 30, 40, 50];
+for (i = 0; i < hi.length; i++) {
+  console.log(hi[i]);
 }
 
-let agee = 23;
-switch (agee) {
-  case 10:
-    console.log("your are is below 10");
-    break;
-  case 23:
-    console.log("your age is below 20");
-    break;
-  case 30:
-    console.log("your age is under 30");
-    break;
-  default:
-    console.log("thats it");
-}
-
-for (let i = 0; i <= 10; i++) {
-  console.log(`2 * ${i} = ${2 * i}`);
-}
-
-let agge = 1;
-while (agge <= 0) {
-  console.log(`2 * ${agge} = ${2 * agge}`);
-  agge++;
-}
-
-let i = 4;
-do {
-  console.log(i);
-  i++;
-} while (i <= 1);
+let hii = [10, 20, 30, 40, 50];
+let a = hii.map((val, inx, aRR) => {
+  return val, inx;
+});
+console.log(a);
