@@ -224,37 +224,52 @@
 // };
 // console.log(userr(1, 2, 3));
 
-let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-nums.push(11);
-console.log(nums);
+// let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// nums.push(11);
+// console.log(nums);
 
-let numss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-numss.pop();
-console.log(numss);
+// let numss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// numss.pop();
+// console.log(numss);
 
-let numsss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-numsss.shift();
-console.log(numsss);
+// let numsss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// numsss.shift();
+// console.log(numsss);
 
-let numms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-numms.unshift(0);
-console.log(numms);
+// let numms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// numms.unshift(0);
+// console.log(numms);
 
-let nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-nnums.splice(0, 4, "mehraqn");
-console.log(nnums);
+// let nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// nnums.splice(0, 4, "mehraqn");
+// console.log(nnums);
 
-let nuums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-nuums.slice(1, 5);
-console.log(nuums);
+// let nuums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// nuums.slice(1, 5);
+// console.log(nuums);
 
-let hi = [10, 20, 30, 40, 50];
-for (i = 0; i < hi.length; i++) {
-  console.log(hi[i]);
+// let hi = [10, 20, 30, 40, 50];
+// for (i = 0; i < hi.length; i++) {
+//   console.log(hi[i]);
+// }
+
+// let hii = [10, 20, 30, 40, 50];
+// let a = hii.map((val, inx, aRR) => {
+//   return val, inx;
+// });
+// console.log(a);
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+};
+for (let val in obj) {
+  console.log(obj[val]);
 }
 
-let hii = [10, 20, 30, 40, 50];
-let a = hii.map((val, inx, aRR) => {
-  return val, inx;
-});
-console.log(a);
+const arr = [10, 20, 30, 40, 50, 60];
+for (let vals of arr) {
+  console.log(vals);
+}
