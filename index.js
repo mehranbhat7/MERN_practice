@@ -319,19 +319,30 @@
 //   console.log(person[val]);
 // }
 
-let arr = [
-  { name: "mehran", age: 23 },
-  { name: "ali", age: 54 },
-];
-for (let vasl of arr) {
-  console.log(vasl.name);
-}
+// let arr = [
+//   { name: "mehran", age: 23 },
+//   { name: "ali", age: 54 },
+// ];
+// for (let vasl of arr) {
+//   console.log(vasl.name);
+// }
 
-function userr() {
-  console.log("i am user1");
-  function user2() {
-    console.log("i am user 2");
+// function userr() {
+//   console.log("i am user1");
+//   function user2() {
+//     console.log("i am user 2");
+//   }
+//   user2();
+// }
+// userr();
+let a = 1;
+function greet() {
+  let a = 11;
+  console.log("this is function ist " + a);
+  function user() {
+    let a = 2;
+    console.log("this is user " + a);
   }
-  user2();
+  user();
 }
-userr();
+greet();
