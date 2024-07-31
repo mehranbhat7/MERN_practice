@@ -304,17 +304,34 @@
 // let [name, friend, ...rest] = arr;
 // console.log(...rest);
 
-let person = {
-  name: "John",
-  age: 30,
-  greet: function () {
-    alert("kaise hoooo");
-  },
-  isStudent: false,
-  arr: [1, 2, 3, 4, 4, 5, 6, 6],
-};
-person.address = "ali jan raod";
-delete person.age;
-for (let val in person) {
-  console.log(person[val]);
+// let person = {
+//   name: "John",
+//   age: 30,
+//   greet: function () {
+//     alert("kaise hoooo");
+//   },
+//   isStudent: false,
+//   arr: [1, 2, 3, 4, 4, 5, 6, 6],
+// };
+// person.address = "ali jan raod";
+// delete person.age;
+// for (let val in person) {
+//   console.log(person[val]);
+// }
+
+let arr = [
+  { name: "mehran", age: 23 },
+  { name: "ali", age: 54 },
+];
+for (let vasl of arr) {
+  console.log(vasl.name);
 }
+
+function userr() {
+  console.log("i am user1");
+  function user2() {
+    console.log("i am user 2");
+  }
+  user2();
+}
+userr();
