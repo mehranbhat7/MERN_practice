@@ -335,14 +335,30 @@
 //   user2();
 // }
 // userr();
-let a = 1;
-function greet() {
-  let a = 11;
-  console.log("this is function ist " + a);
-  function user() {
-    let a = 2;
-    console.log("this is user " + a);
-  }
-  user();
-}
-greet();
+
+// let a = 1;
+// function greet() {
+//
+//   let a = 11;
+//   console.log("this is function ist " + a);
+//   function user() {
+//     let a = 2;
+//     console.log("this is user " + a);
+//   }
+//   user();
+// }
+// greet();
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(arr.length);
+
+// let sert = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9, 9]);
+// console.log(sert.size);
+
+let myMap = new Map([
+  ["name", "mehran"],
+  ["age", 22],
+  ["address", "nawakadal"],
+]);
+myMap.set("gender", "male");
+console.log(myMap.size);
