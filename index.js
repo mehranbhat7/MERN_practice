@@ -287,11 +287,19 @@
 //   }
 // }
 
-let arr1 = ["mehran", "aki", 23];
-let arr2 = ["huzaif", "aqib", 9];
-let res = [...arr1, ...arr2];
-console.log(res);
+// let arr1 = ["mehran", "aki", 23];
+// let arr2 = ["huzaif", "aqib", 9];
+// let res = [...arr1, ...arr2];
+// console.log(res);
 
-arr1 = ["mehran", 25];
-res = arr1;
-console.log(res);
+// arr1 = ["mehran", 25];
+// res = arr1;
+// console.log(res);
+
+let arr1 = ["mehran", "huzaif", true, 98, "kiss"];
+let [name2, friend1, kuch, numbb, chummi] = arr1;
+console.log(kuch);
+
+let arr = ["mehran", "huzaif", true, 98, "kiss"];
+let [name, friend, ...rest] = arr;
+console.log(...rest);
