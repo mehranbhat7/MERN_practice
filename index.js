@@ -259,17 +259,30 @@
 // });
 // console.log(a);
 
-const obj = {
-  a: 1,
-  b: 2,
-  c: 3,
-  d: 4,
-};
-for (let val in obj) {
-  console.log(obj[val]);
-}
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+//   d: 4,
+// };
+// for (let val in obj) {
+//   console.log(obj[val]);
+// }
 
-const arr = [10, 20, 30, 40, 50, 60];
-for (let vals of arr) {
-  console.log(vals);
+// const arr = [10, 20, 30, 40, 50, 60];
+// for (let vals of arr) {
+//   console.log(vals);
+// }
+
+let arr = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+];
+console.log(arr[2][2]);
+
+for (let res of arr) {
+  for (let ress of res) {
+    console.log(ress);
+  }
 }
