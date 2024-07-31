@@ -296,10 +296,25 @@
 // res = arr1;
 // console.log(res);
 
-let arr1 = ["mehran", "huzaif", true, 98, "kiss"];
-let [name2, friend1, kuch, numbb, chummi] = arr1;
-console.log(kuch);
+// let arr1 = ["mehran", "huzaif", true, 98, "kiss"];
+// let [name2, friend1, kuch, numbb, chummi] = arr1;
+// console.log(kuch);
 
-let arr = ["mehran", "huzaif", true, 98, "kiss"];
-let [name, friend, ...rest] = arr;
-console.log(...rest);
+// let arr = ["mehran", "huzaif", true, 98, "kiss"];
+// let [name, friend, ...rest] = arr;
+// console.log(...rest);
+
+let person = {
+  name: "John",
+  age: 30,
+  greet: function () {
+    alert("kaise hoooo");
+  },
+  isStudent: false,
+  arr: [1, 2, 3, 4, 4, 5, 6, 6],
+};
+person.address = "ali jan raod";
+delete person.age;
+for (let val in person) {
+  console.log(person[val]);
+}
