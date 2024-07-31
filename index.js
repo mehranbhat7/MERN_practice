@@ -274,15 +274,24 @@
 //   console.log(vals);
 // }
 
-let arr = [
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9, 10, 11, 12],
-];
-console.log(arr[2][2]);
+// let arr = [
+//   [1, 2, 3, 4],
+//   [5, 6, 7, 8],
+//   [9, 10, 11, 12],
+// ];
+// console.log(arr[2][2]);
 
-for (let res of arr) {
-  for (let ress of res) {
-    console.log(ress);
-  }
-}
+// for (let res of arr) {
+//   for (let ress of res) {
+//     console.log(ress);
+//   }
+// }
+
+let arr1 = ["mehran", "aki", 23];
+let arr2 = ["huzaif", "aqib", 9];
+let res = [...arr1, ...arr2];
+console.log(res);
+
+arr1 = ["mehran", 25];
+res = arr1;
+console.log(res);
