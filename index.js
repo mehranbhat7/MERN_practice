@@ -374,22 +374,84 @@
 // obj.fun();
 // console.log(obj.address);
 
-function greet() {
-  name = "ali";
-  return this.name;
-}
-console.log(greet());
+// function greet() {
+//   name = "ali";
+//   return this.name;
+// }
+// console.log(greet());
 
-function User(name, address) {
-  this.name = name;
-  this.add = address;
-  this.greet = function () {
-    console.log(
-      `hello my name is ${name} and i live at ${address} , nice to meet you `
-    );
-  };
+// function User(name, address) {
+//   this.name = name;
+//   this.add = address;
+//   this.greet = function () {
+//     console.log(
+//       `hello my name is ${name} and i live at ${address} , nice to meet you `
+//     );
+//   };
+// }
+// let user1 = new User("ali", "eidgah");
+// let user2 = new User("aqib", "«jamalatta");
+// user1.greet();
+// user2.greet();
+
+// let symm = Symbol("mehran");
+
+// let obj = {
+//   name: "mehrannnnnn",
+//   [symm]: "my value",
+// };
+// console.log(obj[symm]);
+
+// console.log("hii");
+// console.log("my");
+// setTimeout(() => {
+//   console.log("name");
+// }, 8000);
+// console.log("is");
+// console.log("mehran");
+
+// function user(name) {
+//   console.log("hii  how are you " + name);
+// }
+// setTimeout(user, 6000, "mehran");
+
+setTimeout(() => {
+  console.log("kaiose");
+}, 2000);
+setTimeout(() => {
+  console.log("hoo ");
+}, 4000);
+setTimeout(() => {
+  console.log("app");
+}, 5000);
+setTimeout(() => {
+  console.log("sabhi ");
+}, 8000);
+
+setTimeout(() => {
+  console.log("my ");
+  setTimeout(() => {
+    console.log("name");
+  }, 4000);
+}, 3000);
+
+function user() {
+  console.log("my name is user");
 }
-let user1 = new User("ali", "eidgah");
-let user2 = new User("aqib", "«jamalatta");
-user1.greet();
-user2.greet();
+function user1() {
+  console.log("my name is user1");
+}
+function person(name, callback, call, caqll1, cqqlu) {
+  console.log("my name is " + name);
+  cqqlu();
+  callback();
+  call();
+  caqll1();
+}
+function user2() {
+  console.log("my name is user2");
+}
+function user3() {
+  console.log("my name is user3");
+}
+person("aqib", user, user1, user2, user3);
