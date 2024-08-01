@@ -363,13 +363,33 @@
 // myMap.set("gender", "male");
 // console.log(myMap.size);
 
-const obj = {
-  name: "mehran",
-  age: 23,
-  address: "aalikadal",
-  fun: function () {
-    console.log(this.name);
-  },
-};
-obj.fun();
-console.log(obj.address);
+// const obj = {
+//   name: "mehran",
+//   age: 23,
+//   address: "aalikadal",
+//   fun: function () {
+//     console.log(this.name);
+//   },
+// };
+// obj.fun();
+// console.log(obj.address);
+
+function greet() {
+  name = "ali";
+  return this.name;
+}
+console.log(greet());
+
+function User(name, address) {
+  this.name = name;
+  this.add = address;
+  this.greet = function () {
+    console.log(
+      `hello my name is ${name} and i live at ${address} , nice to meet you `
+    );
+  };
+}
+let user1 = new User("ali", "eidgah");
+let user2 = new User("aqib", "«jamalatta");
+user1.greet();
+user2.greet();
