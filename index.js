@@ -355,10 +355,21 @@
 // let sert = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 9, 9]);
 // console.log(sert.size);
 
-let myMap = new Map([
-  ["name", "mehran"],
-  ["age", 22],
-  ["address", "nawakadal"],
-]);
-myMap.set("gender", "male");
-console.log(myMap.size);
+// let myMap = new Map([
+//   ["name", "mehran"],
+//   ["age", 22],
+//   ["address", "nawakadal"],
+// ]);
+// myMap.set("gender", "male");
+// console.log(myMap.size);
+
+const obj = {
+  name: "mehran",
+  age: 23,
+  address: "aalikadal",
+  fun: function () {
+    console.log(this.name);
+  },
+};
+obj.fun();
+console.log(obj.address);
