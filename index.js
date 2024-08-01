@@ -486,58 +486,81 @@
 //   });
 // });
 
-function wakeup(callback) {
-  setTimeout(() => {
-    console.log("i wake up at 6 o clock");
-    callback();
-  }, 3000);
+// function wakeup() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("i wake up at 6 o clock");
+//       res();
+//     }, 3000);
+//   });
+// }
+// function gym() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("leave for gym at 7");
+//       res();
+//     }, 3000);
+//   });
+// }
+// function bath() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("after gym i take a bath");
+//       res();
+//     }, 3000);
+//   });
+// }
+// function dressup() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("i get dressed for the college");
+//       res();
+//     }, 3000);
+//   });
+// }
+// function travel() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("then i travel 5 kms towards college");
+//       res();
+//     }, 3000);
+//   });
+// }
+// function study() {
+//   return new Promise((res, rerj) => {
+//     setTimeout(() => {
+//       console.log("then i study at college");
+//       res();
+//     }, 3000);
+//   });
+// }
+// function sleep() {
+//   return new Promise((res, rejs) => {
+//     setTimeout(() => {
+//       console.log("i get tiered and then i sleep");
+//       res();
+//     }, 1000);
+//   });
+// }
+// async function exe() {
+//   await wakeup();
+//   await gym();
+//   await bath();
+//   await dressup();
+//   await travel();
+//   await study();
+//   await sleep();
+// }
+// exe().catch((err) => {
+//   console.log(err);
+// });
+let num = 0;
+function fun() {
+  num = num + 1;
+  console.log(num);
 }
-function gym(call) {
-  setTimeout(() => {
-    console.log("leave for gym at 7");
-    call();
-  }, 3000);
-}
-function bath(call) {
-  setTimeout(() => {
-    console.log("after gym i take a bath");
-    call();
-  }, 3000);
-}
-function dressup(call) {
-  setTimeout(() => {
-    console.log("i get dressed for the college");
-    call();
-  }, 3000);
-}
-function travel(call) {
-  setTimeout(() => {
-    console.log("then i travel 5 kms towards college");
-    call();
-  }, 3000);
-}
-function study(call) {
-  setTimeout(() => {
-    console.log("then i study at college");
-    call();
-  }, 3000);
-}
-function sleep(call) {
-  setTimeout(() => {
-    console.log("i get tiered and then i sleep");
-    call();
-  }, 1000);
-}
-wakeup(() => {
-  gym(() => {
-    bath(() => {
-      dressup(() => {
-        travel(() => {
-          study(() => {
-            sleep(() => {});
-          });
-        });
-      });
-    });
-  });
-});
+
+let inn = setInterval(fun, 1000);
+setTimeout(() => {
+  clearInterval(inn);
+}, 10000);
