@@ -415,43 +415,129 @@
 // }
 // setTimeout(user, 6000, "mehran");
 
-setTimeout(() => {
-  console.log("kaiose");
-}, 2000);
-setTimeout(() => {
-  console.log("hoo ");
-}, 4000);
-setTimeout(() => {
-  console.log("app");
-}, 5000);
-setTimeout(() => {
-  console.log("sabhi ");
-}, 8000);
+// setTimeout(() => {
+//   console.log("kaiose");
+// }, 2000);
+// setTimeout(() => {
+//   console.log("hoo ");
+// }, 4000);
+// setTimeout(() => {
+//   console.log("app");
+// }, 5000);
+// setTimeout(() => {
+//   console.log("sabhi ");
+// }, 8000);
 
-setTimeout(() => {
-  console.log("my ");
+// setTimeout(() => {
+//   console.log("my ");
+//   setTimeout(() => {
+//     console.log("name");
+//   }, 4000);
+// }, 3000);
+
+// function user() {
+//   console.log("my name is user");
+// }
+// function user1() {
+//   console.log("my name is user1");
+// }
+// function person(name, callback, call, caqll1, cqqlu) {
+//   console.log("my name is " + name);
+//   cqqlu();
+//   callback();
+//   call();
+//   caqll1();
+// }
+// function user2() {
+//   console.log("my name is user2");
+// }
+// function user3() {
+//   console.log("my name is user3");
+// }
+// person("aqib", user, user1, user2, user3);
+
+// function mobile(callb) {
+//   setTimeout(() => {
+//     console.log("use mobile");
+//     callb();
+//   }, 2000);
+// }
+
+// function loadingdata(call) {
+//   setTimeout(() => {
+//     console.log("1) data is loading...");
+//     call();
+//   }, 2000);
+// }
+// function fetchingdata(call) {
+//   setTimeout(() => {
+//     console.log("2) data is fetching...");
+//     call();
+//   }, 2000);
+// }
+// function approved() {
+//   console.log("3) data approved");
+// }
+// mobile(() => {
+//   loadingdata(() => {
+//     fetchingdata(() => {
+//       approved();
+//     });
+//   });
+// });
+
+function wakeup(callback) {
   setTimeout(() => {
-    console.log("name");
-  }, 4000);
-}, 3000);
-
-function user() {
-  console.log("my name is user");
+    console.log("i wake up at 6 o clock");
+    callback();
+  }, 3000);
 }
-function user1() {
-  console.log("my name is user1");
+function gym(call) {
+  setTimeout(() => {
+    console.log("leave for gym at 7");
+    call();
+  }, 3000);
 }
-function person(name, callback, call, caqll1, cqqlu) {
-  console.log("my name is " + name);
-  cqqlu();
-  callback();
-  call();
-  caqll1();
+function bath(call) {
+  setTimeout(() => {
+    console.log("after gym i take a bath");
+    call();
+  }, 3000);
 }
-function user2() {
-  console.log("my name is user2");
+function dressup(call) {
+  setTimeout(() => {
+    console.log("i get dressed for the college");
+    call();
+  }, 3000);
 }
-function user3() {
-  console.log("my name is user3");
+function travel(call) {
+  setTimeout(() => {
+    console.log("then i travel 5 kms towards college");
+    call();
+  }, 3000);
 }
-person("aqib", user, user1, user2, user3);
+function study(call) {
+  setTimeout(() => {
+    console.log("then i study at college");
+    call();
+  }, 3000);
+}
+function sleep(call) {
+  setTimeout(() => {
+    console.log("i get tiered and then i sleep");
+    call();
+  }, 1000);
+}
+wakeup(() => {
+  gym(() => {
+    bath(() => {
+      dressup(() => {
+        travel(() => {
+          study(() => {
+            sleep(() => {});
+          });
+        });
+      });
+    });
+  });
+});
