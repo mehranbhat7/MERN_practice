@@ -634,3 +634,41 @@ switch (names) {
   default:
     console.log("unkown entered");
 }
+
+let namex = "mehran";
+for (let i = 0; i <= 10; i++) {
+  console.log(`19 * ${i} = ${19 * i}`);
+}
+let age = 40;
+while (age <= 50) {
+  console.log(age);
+  age++;
+}
+
+function user(age) {
+  console.log("i ma user " + age);
+}
+user(34);
+
+let uuser = function (age) {
+  console.log("i ma wser " + age);
+};
+uuser(11);
+
+(function (mobile) {
+  console.log("i ma wser55 " + mobile);
+})(74385872375);
+
+let man = (age, name) => console.log("mehraaaaan" + age + " " + name);
+man(998, "hishh");
+
+let fruits = ["apple", "mango", "banana", "orange", "grapes"];
+let vegs = ["tomato", "potato", "onion"];
+let res = fruits.concat(vegs);
+res.filter((res) => res.length >= 5);
+console.log(res);
+
+let nuum = [10, 20, 30, 40, 50, 60, 70];
+nuum.forEach((val, index, arr) => {
+  console.log(arr);
+});
