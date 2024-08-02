@@ -564,3 +564,73 @@
 // setTimeout(() => {
 //   clearInterval(inn);
 // }, 10000);
+// "Use Strict";
+// var name = "adil";
+
+// var name = "mehran";
+
+// var name = "abid";
+// console.log(name);
+
+// function user() {
+//   console.log(name);
+// }
+// user();
+
+// let name = "mehran";
+// function usr() {
+//   console.log(name);
+// }
+// usr();
+// console.log(name);
+
+// let n = 122323546;
+// let str = "mehran";
+// let bol = true;
+// let nu = null;
+// let un = undefined;
+
+let str = "mehrann , uidsghfuyw , weatwyegt m iuweugary3t";
+str = Number(str);
+console.log(typeof str);
+let bol = false;
+bol = String(bol);
+console.log(typeof bol);
+
+let a = 6;
+let b = 8;
+console.log(a++);
+console.log(a);
+console.log(++a);
+console.log(--a);
+
+console.log(a != b);
+
+console.log(5 > 2 && 9 < 10);
+
+let name = "mehran";
+if (name.startsWith("mehrn")) {
+  console.log("correct user");
+} else if (name[0] === "m") {
+  console.log("he is inn");
+} else {
+  console.log("wrong user");
+}
+
+let names = "hatimfds";
+switch (names) {
+  case "mehran":
+    console.log("mehran entered");
+    break;
+  case "Ali":
+    console.log("Ali entered");
+    break;
+  case "hatim":
+    console.log("hatim entered");
+    break;
+  case "huzaif":
+    console.log("huzii entered");
+    break;
+  default:
+    console.log("unkown entered");
+}
