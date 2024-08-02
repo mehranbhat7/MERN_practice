@@ -1,1 +1,37 @@
-
+.head {
+  font-size: xx-large;
+}
+.box {
+  border: 2px solid black;
+  padding: 30px;
+  margin: 30px;
+  text-align: center;
+}
+a:link {
+  color: red;
+}
+a:hover {
+  color: chartreuse;
+}
+a:active {
+  color: gold;
+}
+.bigbox {
+  border: 2px solid black;
+  padding: 15px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.box1 {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 15px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}

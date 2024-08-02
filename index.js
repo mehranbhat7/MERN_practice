@@ -554,13 +554,13 @@
 // exe().catch((err) => {
 //   console.log(err);
 // });
-let num = 0;
-function fun() {
-  num = num + 1;
-  console.log(num);
-}
+// let num = 0;
+// function fun() {
+//   num = num + 1;
+//   console.log(num);
+// }
 
-let inn = setInterval(fun, 1000);
-setTimeout(() => {
-  clearInterval(inn);
-}, 10000);
+// let inn = setInterval(fun, 1000);
+// setTimeout(() => {
+//   clearInterval(inn);
+// }, 10000);
