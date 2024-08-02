@@ -590,85 +590,180 @@
 // let nu = null;
 // let un = undefined;
 
-let str = "mehrann , uidsghfuyw , weatwyegt m iuweugary3t";
-str = Number(str);
-console.log(typeof str);
-let bol = false;
-bol = String(bol);
-console.log(typeof bol);
+// let str = "mehrann , uidsghfuyw , weatwyegt m iuweugary3t";
+// str = Number(str);
+// console.log(typeof str);
+// let bol = false;
+// bol = String(bol);
+// console.log(typeof bol);
 
-let a = 6;
-let b = 8;
-console.log(a++);
-console.log(a);
-console.log(++a);
-console.log(--a);
+// let a = 6;
+// let b = 8;
+// console.log(a++);
+// console.log(a);
+// console.log(++a);
+// console.log(--a);
 
-console.log(a != b);
+// console.log(a != b);
 
-console.log(5 > 2 && 9 < 10);
+// console.log(5 > 2 && 9 < 10);
 
-let name = "mehran";
-if (name.startsWith("mehrn")) {
-  console.log("correct user");
-} else if (name[0] === "m") {
-  console.log("he is inn");
-} else {
-  console.log("wrong user");
-}
+// let name = "mehran";
+// if (name.startsWith("mehrn")) {
+//   console.log("correct user");
+// } else if (name[0] === "m") {
+//   console.log("he is inn");
+// } else {
+//   console.log("wrong user");
+// }
 
-let names = "hatimfds";
-switch (names) {
-  case "mehran":
-    console.log("mehran entered");
-    break;
-  case "Ali":
-    console.log("Ali entered");
-    break;
-  case "hatim":
-    console.log("hatim entered");
-    break;
-  case "huzaif":
-    console.log("huzii entered");
-    break;
-  default:
-    console.log("unkown entered");
-}
+// let names = "hatimfds";
+// switch (names) {
+//   case "mehran":
+//     console.log("mehran entered");
+//     break;
+//   case "Ali":
+//     console.log("Ali entered");
+//     break;
+//   case "hatim":
+//     console.log("hatim entered");
+//     break;
+//   case "huzaif":
+//     console.log("huzii entered");
+//     break;
+//   default:
+//     console.log("unkown entered");
+// }
 
-let namex = "mehran";
-for (let i = 0; i <= 10; i++) {
-  console.log(`19 * ${i} = ${19 * i}`);
-}
-let age = 40;
-while (age <= 50) {
-  console.log(age);
-  age++;
-}
+// let namex = "mehran";
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`19 * ${i} = ${19 * i}`);
+// }
+// let age = 40;
+// while (age <= 50) {
+//   console.log(age);
+//   age++;
+// }
 
-function user(age) {
-  console.log("i ma user " + age);
-}
-user(34);
+// function user(age) {
+//   console.log("i ma user " + age);
+// }
+// user(34);
 
-let uuser = function (age) {
-  console.log("i ma wser " + age);
+// let uuser = function (age) {
+//   console.log("i ma wser " + age);
+// };
+// uuser(11);
+
+// (function (mobile) {
+//   console.log("i ma wser55 " + mobile);
+// })(74385872375);
+
+// let man = (age, name) => console.log("mehraaaaan" + age + " " + name);
+// man(998, "hishh");
+
+// let fruits = ["apple", "mango", "banana", "orange", "grapes"];
+// let vegs = ["tomato", "potato", "onion"];
+// let res = fruits.concat(vegs);
+// res.filter((res) => res.length >= 5);
+// console.log(res);
+
+// let nuum = [10, 20, 30, 40, 50, 60, 70];
+// nuum.forEach((val, index, arr) => {
+//   console.log(arr);
+// });
+
+let obj = {
+  name: "mehran",
+  age: 22,
+  address: "nawakadal",
+  gender: "male",
+  user: function () {
+    console.log("tjis is a FUNCTION");
+  },
 };
-uuser(11);
+console.log(obj.user());
+for (let prop in obj) {
+  console.log(prop);
+}
 
-(function (mobile) {
-  console.log("i ma wser55 " + mobile);
-})(74385872375);
+let arr = [10, 20, 30, 40, "gdgh", true, null];
+for (let val of arr) {
+  console.log(val);
+}
 
-let man = (age, name) => console.log("mehraaaaan" + age + " " + name);
-man(998, "hishh");
+let ar = [[1, 2, 3, 4, 5], ["hii"], [true, false]];
+for (let vals of ar) {
+  for (let res of vals) {
+    console.log(res);
+  }
+}
 
-let fruits = ["apple", "mango", "banana", "orange", "grapes"];
-let vegs = ["tomato", "potato", "onion"];
-let res = fruits.concat(vegs);
-res.filter((res) => res.length >= 5);
+let arr1 = [2, 34, 45, 6, 67];
+let arr2 = ["mehdsf", "assadgh", "hfwasfh"];
+res = [...arr1, ...arr2];
 console.log(res);
 
-let nuum = [10, 20, 30, 40, 50, 60, 70];
-nuum.forEach((val, index, arr) => {
-  console.log(arr);
-});
+let fruits = ["mango", "apple", "banana", "cherry"];
+let [one, two, three, four] = fruits;
+console.log(two);
+
+// function userz() {
+//   console.log("i am user ");
+//   function userx() {
+//     console.log("iam user ");
+//   }
+//   userx();
+// }
+// userz();
+
+// let set = new Set[(1, 22, 3, 4, 5, 6, 7)]();
+// console.log(set);
+
+// function greet(name) {
+//   console.log("time out sir " + name);
+// }
+// setTimeout(greet, 3000, "mehran");
+function goodmorning() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("good moorni8ng ");
+      res();
+    }, 2000);
+  });
+}
+function breakfast() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("its time to eat sir");
+      res();
+    }, 2000);
+  });
+}
+function lunch() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("its time to eat lunch sir");
+      rej("do not have lunch");
+    }, 2000);
+  });
+}
+function dinner() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("its time to eat dinner sir");
+      res();
+    }, 2000);
+  });
+}
+async function result() {
+  try {
+    await goodmorning();
+    await breakfast();
+    await lunch();
+    await dinner();
+  } catch (err) {
+    console.log(err);
+  }
+}
+result();
