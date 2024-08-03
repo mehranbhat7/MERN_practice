@@ -855,18 +855,32 @@
 // gaem.end();
 // gaem.end();
 
-function math(a, b) {
-  try {
-    if (b === 0) {
-      throw new Error("it is zero");
-    } else if (a / b === Infinity) {
-      throw new Error("it is infinity");
-    } else {
-      console.log(a / b);
+// function math(a, b) {
+//   try {
+//     if (b === 0) {
+//       throw new Error("it is zero");
+//     } else if (a / b === Infinity) {
+//       throw new Error("it is infinity");
+//     } else {
+//       console.log(a / b);
+//     }
+//   } catch (err) {
+//     console.log(err.message);
+//   }
+// }
+// math(10, 0);
+// math(0, 10);
+
+fetch("https://fakestoreapi.co/products")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("an error occured");
     }
-  } catch (err) {
-    console.log(err.message);
-  }
-}
-math(10, 0);
-math(0, 10);
+    return res.json();
+  })
+  .then((data) =>
+    data.forEach((element) => {
+      console.log(element.title);
+    })
+  )
+  .catch((error) => console.log(error));
