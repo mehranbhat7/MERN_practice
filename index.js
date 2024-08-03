@@ -815,42 +815,58 @@
 // let useer = new User2("ali");
 // useer.salary();
 
-class User1 {
-  constructor(name) {
-    this.name = name;
-  }
-  greet() {
-    console.log(`${this.name} welcome`);
-  }
-  static bye() {
-    console.log(`${this.name} bye bye`);
-  }
-}
-let user = new User1("mehran");
-User1.bye();
+// class User1 {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   greet() {
+//     console.log(`${this.name} welcome`);
+//   }
+//   static bye() {
+//     console.log(`${this.name} bye bye`);
+//   }
+// }
+// let user = new User1("mehran");
+// User1.bye();
 
-class Game {
-  static scoree = 0;
-  constructor() {
-    this.playing = false;
-  }
-  start() {
-    this.playing = false;
-    console.log("game has started");
-  }
-  end() {
-    this.playing = false;
-    console.log("game has ended");
-    Game.score();
-  }
-  static score() {
-    Game.scoree++;
-    console.log(`${Game.scoree}`);
+// class Game {
+//   static scoree = 0;
+//   constructor() {
+//     this.playing = false;
+//   }
+//   start() {
+//     this.playing = false;
+//     console.log("game has started");
+//   }
+//   end() {
+//     this.playing = false;
+//     console.log("game has ended");
+//     Game.score();
+//   }
+//   static score() {
+//     Game.scoree++;
+//     console.log(`${Game.scoree}`);
+//   }
+// }
+// let gaem = new Game();
+// gaem.start();
+// gaem.end();
+// gaem.end();
+// gaem.end();
+// gaem.end();
+
+function math(a, b) {
+  try {
+    if (b === 0) {
+      throw new Error("it is zero");
+    } else if (a / b === Infinity) {
+      throw new Error("it is infinity");
+    } else {
+      console.log(a / b);
+    }
+  } catch (err) {
+    console.log(err.message);
   }
 }
-let gaem = new Game();
-gaem.start();
-gaem.end();
-gaem.end();
-gaem.end();
-gaem.end();
+math(10, 0);
+math(0, 10);
