@@ -782,12 +782,35 @@
 // user2.__proto__ = user1;
 // console.log(user2.address);
 
-let user1 = {
-  name: "ali",
-  age: 30,
-  address: "lalbazar",
-  gender: "male",
-  profession: "frontend",
-};
-user2 = Object.create(user1);
-console.log(user2.gender);
+// let user1 = {
+//   name: "ali",
+//   age: 30,
+//   address: "lalbazar",
+//   gender: "male",
+//   profession: "frontend",
+// };
+// user2 = Object.create(user1);
+// console.log(user2.gender);
+
+class User {
+  constructor(name, age) {
+    (this.name = name), (this.age = age);
+  }
+  greet() {
+    console.log(`${this.name} wellcome to the company`);
+  }
+}
+
+let res = new User("mehean", 23);
+res.greet();
+
+class Fruits {
+  constructor(name) {
+    this.name = name;
+  }
+  fav() {
+    console.log(`${this.name} is my favourite fruit`);
+  }
+}
+let rez = new Fruits("mango");
+rez.fav();
