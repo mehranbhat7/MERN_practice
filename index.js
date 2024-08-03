@@ -792,25 +792,65 @@
 // user2 = Object.create(user1);
 // console.log(user2.gender);
 
+// class User1 {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   kaam() {
+//     console.log(`${this.name} is a frontend developer`);
+//   }
+//   work() {
+//     console.log(`${this.name} works from home`);
+//   }
+// }
+// class User2 extends User1 {
+//   constructor(name) {
+//     super(name);
+//     this.name = name;
+//   }
+//   salary() {
+//     console.log(`${this.name} takes 100k per anum`);
+//   }
+// }
+// let useer = new User2("ali");
+// useer.salary();
+
 class User1 {
   constructor(name) {
     this.name = name;
   }
-  kaam() {
-    console.log(`${this.name} is a frontend developer`);
+  greet() {
+    console.log(`${this.name} welcome`);
   }
-  work() {
-    console.log(`${this.name} works from home`);
-  }
-}
-class User2 extends User1 {
-  constructor(name) {
-    super(name);
-    this.name = name;
-  }
-  salary() {
-    console.log(`${this.name} takes 100k per anum`);
+  static bye() {
+    console.log(`${this.name} bye bye`);
   }
 }
-let useer = new User2("ali");
-useer.salary();
+let user = new User1("mehran");
+User1.bye();
+
+class Game {
+  static scoree = 0;
+  constructor() {
+    this.playing = false;
+  }
+  start() {
+    this.playing = false;
+    console.log("game has started");
+  }
+  end() {
+    this.playing = false;
+    console.log("game has ended");
+    Game.score();
+  }
+  static score() {
+    Game.scoree++;
+    console.log(`${Game.scoree}`);
+  }
+}
+let gaem = new Game();
+gaem.start();
+gaem.end();
+gaem.end();
+gaem.end();
+gaem.end();
