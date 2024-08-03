@@ -792,25 +792,25 @@
 // user2 = Object.create(user1);
 // console.log(user2.gender);
 
-class User {
-  constructor(name, age) {
-    (this.name = name), (this.age = age);
-  }
-  greet() {
-    console.log(`${this.name} wellcome to the company`);
-  }
-}
-
-let res = new User("mehean", 23);
-res.greet();
-
-class Fruits {
+class User1 {
   constructor(name) {
     this.name = name;
   }
-  fav() {
-    console.log(`${this.name} is my favourite fruit`);
+  kaam() {
+    console.log(`${this.name} is a frontend developer`);
+  }
+  work() {
+    console.log(`${this.name} works from home`);
   }
 }
-let rez = new Fruits("mango");
-rez.fav();
+class User2 extends User1 {
+  constructor(name) {
+    super(name);
+    this.name = name;
+  }
+  salary() {
+    console.log(`${this.name} takes 100k per anum`);
+  }
+}
+let useer = new User2("ali");
+useer.salary();
