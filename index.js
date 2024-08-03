@@ -673,40 +673,40 @@
 //   console.log(arr);
 // });
 
-let obj = {
-  name: "mehran",
-  age: 22,
-  address: "nawakadal",
-  gender: "male",
-  user: function () {
-    console.log("tjis is a FUNCTION");
-  },
-};
-console.log(obj.user());
-for (let prop in obj) {
-  console.log(prop);
-}
+// let obj = {
+//   name: "mehran",
+//   age: 22,
+//   address: "nawakadal",
+//   gender: "male",
+//   user: function () {
+//     console.log("tjis is a FUNCTION");
+//   },
+// };
+// console.log(obj.user());
+// for (let prop in obj) {
+//   console.log(prop);
+// }
 
-let arr = [10, 20, 30, 40, "gdgh", true, null];
-for (let val of arr) {
-  console.log(val);
-}
+// let arr = [10, 20, 30, 40, "gdgh", true, null];
+// for (let val of arr) {
+//   console.log(val);
+// }
 
-let ar = [[1, 2, 3, 4, 5], ["hii"], [true, false]];
-for (let vals of ar) {
-  for (let res of vals) {
-    console.log(res);
-  }
-}
+// let ar = [[1, 2, 3, 4, 5], ["hii"], [true, false]];
+// for (let vals of ar) {
+//   for (let res of vals) {
+//     console.log(res);
+//   }
+// }
 
-let arr1 = [2, 34, 45, 6, 67];
-let arr2 = ["mehdsf", "assadgh", "hfwasfh"];
-res = [...arr1, ...arr2];
-console.log(res);
+// let arr1 = [2, 34, 45, 6, 67];
+// let arr2 = ["mehdsf", "assadgh", "hfwasfh"];
+// res = [...arr1, ...arr2];
+// console.log(res);
 
-let fruits = ["mango", "apple", "banana", "cherry"];
-let [one, two, three, four] = fruits;
-console.log(two);
+// let fruits = ["mango", "apple", "banana", "cherry"];
+// let [one, two, three, four] = fruits;
+// console.log(two);
 
 // function userz() {
 //   console.log("i am user ");
@@ -724,46 +724,70 @@ console.log(two);
 //   console.log("time out sir " + name);
 // }
 // setTimeout(greet, 3000, "mehran");
-function goodmorning() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      console.log("good moorni8ng ");
-      res();
-    }, 2000);
-  });
-}
-function breakfast() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      console.log("its time to eat sir");
-      res();
-    }, 2000);
-  });
-}
-function lunch() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      console.log("its time to eat lunch sir");
-      rej("do not have lunch");
-    }, 2000);
-  });
-}
-function dinner() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      console.log("its time to eat dinner sir");
-      res();
-    }, 2000);
-  });
-}
-async function result() {
-  try {
-    await goodmorning();
-    await breakfast();
-    await lunch();
-    await dinner();
-  } catch (err) {
-    console.log(err);
-  }
-}
-result();
+// function goodmorning() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("good moorni8ng ");
+//       res();
+//     }, 2000);
+//   });
+// }
+// function breakfast() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("its time to eat sir");
+//       res();
+//     }, 2000);
+//   });
+// }
+// function lunch() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("its time to eat lunch sir");
+//       rej("do not have lunch");
+//     }, 2000);
+//   });
+// }
+// function dinner() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("its time to eat dinner sir");
+//       res();
+//     }, 2000);
+//   });
+// }
+// async function result() {
+//   try {
+//     await goodmorning();
+//     await breakfast();
+//     await lunch();
+//     await dinner();
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+// result();
+
+// let user1 = {
+//   name: "ali",
+//   age: 30,
+//   address: "lalbazar",
+//   gender: "male",
+//   profession: "frontend",
+// };
+// let user2 = {
+//   name: "Hazik",
+//   age: 20,
+// };
+// user2.__proto__ = user1;
+// console.log(user2.address);
+
+let user1 = {
+  name: "ali",
+  age: 30,
+  address: "lalbazar",
+  gender: "male",
+  profession: "frontend",
+};
+user2 = Object.create(user1);
+console.log(user2.gender);
