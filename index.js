@@ -871,16 +871,31 @@
 // math(10, 0);
 // math(0, 10);
 
-fetch("https://fakestoreapi.co/products")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error("an error occured");
-    }
-    return res.json();
-  })
-  .then((data) =>
-    data.forEach((element) => {
-      console.log(element.title);
-    })
-  )
-  .catch((error) => console.log(error));
+// fetch("https://fakestoreapi.co/products")
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error("an error occured");
+//     }
+//     return res.json();
+//   })
+//   .then((data) =>
+//     data.forEach((element) => {
+//       console.log(element.title);
+//     })
+//   )
+//   .catch((error) => console.log(error));
+
+let a = document.getElementsByTagName("li");
+console.log(a);
+
+let b = document.getElementsByClassName("box");
+console.log(b);
+
+let c = document.getElementById("hi");
+console.log(c);
+
+let d = document.querySelector(".box");
+console.log(d);
+
+let e = document.querySelectorAll(".box");
+console.log(e);
