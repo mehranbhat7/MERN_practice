@@ -908,6 +908,9 @@
 // let child = parent.lastChild;
 // console.log(child);
 
-let a = document.querySelector(".b");
-let sib = a.nextSibling;
-console.log(sib);
+// let a = document.querySelector(".b");
+// let sib = a.nextSibling;
+// console.log(sib);
+
+let a = document.querySelectorAll(".box");
+console.log(a);
