@@ -885,17 +885,29 @@
 //   )
 //   .catch((error) => console.log(error));
 
-let a = document.getElementsByTagName("li");
-console.log(a);
+// let a = document.getElementsByTagName("li");
+// console.log(a);
 
-let b = document.getElementsByClassName("box");
-console.log(b);
+// let b = document.getElementsByClassName("box");
+// console.log(b);
 
-let c = document.getElementById("hi");
-console.log(c);
+// let c = document.getElementById("hi");
+// console.log(c);
 
-let d = document.querySelector(".box");
-console.log(d);
+// let d = document.querySelector(".box");
+// console.log(d);
 
-let e = document.querySelectorAll(".box");
-console.log(e);
+// let e = document.querySelectorAll(".box");
+// console.log(e);
+
+// let a = document.querySelector(".child");
+// let b = a.parentNode;
+// console.log(b);
+
+// let parent = document.getElementById("parent");
+// let child = parent.lastChild;
+// console.log(child);
+
+let a = document.querySelector(".b");
+let sib = a.nextSibling;
+console.log(sib);
