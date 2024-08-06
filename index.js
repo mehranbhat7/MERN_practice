@@ -930,3 +930,6 @@ console.log(parent);
 let a = document.getElementById("b");
 let sibling = a.previousSibling;
 console.log(sibling);
+
+let x = document.getElementById("b").innerHTML;
+console.log(x);
