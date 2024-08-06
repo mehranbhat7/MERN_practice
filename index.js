@@ -926,3 +926,7 @@
 let child = document.getElementById("abs");
 let parent = child.children;
 console.log(parent);
+
+let a = document.getElementById("b");
+let sibling = a.previousSibling;
+console.log(sibling);
