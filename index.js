@@ -912,5 +912,17 @@
 // let sib = a.nextSibling;
 // console.log(sib);
 
-let a = document.querySelectorAll(".box");
-console.log(a);
+// let a = document.querySelectorAll(".box");
+// console.log(a);
+
+// let child = document.getElementById("b");
+// let parent = child.parentNode;
+// console.log(parent);
+
+// let papa = document.getElementById("div");
+// let bacha = papa.children;
+// console.log(papa);
+
+let child = document.getElementById("abs");
+let parent = child.children;
+console.log(parent);
