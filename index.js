@@ -933,3 +933,14 @@ console.log(sibling);
 
 let x = document.getElementById("b").innerHTML;
 console.log(x);
+
+fetch(" https://pokeapi.co/api/2/pokemon/ditto")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("not working yaar");
+    } else {
+      return res.json();
+    }
+  })
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));
