@@ -944,10 +944,22 @@
 //   })
 //   .then((data) => console.log(data))
 //   .catch((err) => console.error (err));
-let a = document.querySelectorAll(".box");
-let sin = a.nextElementSibling;
-console.log(sin);
+// let a = document.querySelectorAll(".box");
+// let sin = a.nextElementSibling;
+// console.log(sin);
 
-a.forEach((ele) => {
-  console.log(ele.nextElementSibling);
-});
+// a.forEach((ele) => {
+//   console.log(ele.nextElementSibling);
+// });
+
+const ul = document.querySelector("ul");
+const news = document.createElement("ul");
+ul.textContent = "mattu";
+ul.appendChild(news);
+console.log(ul);
+
+if (ul.lastElementChild === news) {
+  console.log("haan yahi  a");
+} else {
+  console.log("chal naaa");
+}
