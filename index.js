@@ -944,10 +944,10 @@
 //   })
 //   .then((data) => console.log(data))
 //   .catch((err) => console.error (err));
+let a = document.querySelectorAll(".box");
+let sin = a.nextElementSibling;
+console.log(sin);
 
-let a = document.querySelector(".box");
-if (a.previousElementSibling === null) {
-  console.log("'noooo");
-} else {
-  console.log(a.previousSibling);
-}
+a.forEach((ele) => {
+  console.log(ele.nextElementSibling);
+});
