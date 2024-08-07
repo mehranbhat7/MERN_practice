@@ -952,14 +952,26 @@
 //   console.log(ele.nextElementSibling);
 // });
 
-let div = document.querySelector("div");
-let news = document.createElement("h1");
-news.textContent = "this is modified";
-div.appendChild(news);
-console.log(div);
+// let div = document.querySelector("div");
+// let news = document.createElement("h1");
+// news.textContent = "this is modified";
+// div.appendChild(news);
+// console.log(div);
+
+// let parent = document.querySelector("ul");
+// let tochange = parent.children[1];
+// let now = document.createElement("li");
+// now.textContent = "mehran";
+// parent.replaceChild(now, tochange);
+
+let ul = document.querySelector("ul");
+let neww = document.createElement("h1");
+neww.textContent = "this is new";
+ul.appendChild(neww);
+console.log(ul);
 
 let parent = document.querySelector("ul");
-let tochange = parent.children[1];
-let now = document.createElement("li");
-now.textContent = "mehran";
-parent.replaceChild(now, tochange);
+let change = parent.children[2];
+let nawa = document.createElement("li");
+nawa.textContent = "cahnged";
+parent.replaceChild(nawa, change);
