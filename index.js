@@ -952,14 +952,14 @@
 //   console.log(ele.nextElementSibling);
 // });
 
-const ul = document.querySelector("ul");
-const news = document.createElement("ul");
-ul.textContent = "mattu";
-ul.appendChild(news);
-console.log(ul);
+let div = document.querySelector("div");
+let news = document.createElement("h1");
+news.textContent = "this is modified";
+div.appendChild(news);
+console.log(div);
 
-if (ul.lastElementChild === news) {
-  console.log("haan yahi  a");
-} else {
-  console.log("chal naaa");
-}
+let parent = document.querySelector("ul");
+let tochange = parent.children[1];
+let now = document.createElement("li");
+now.textContent = "mehran";
+parent.replaceChild(now, tochange);
