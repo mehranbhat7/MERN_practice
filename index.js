@@ -923,24 +923,31 @@
 // let bacha = papa.children;
 // console.log(papa);
 
-let child = document.getElementById("abs");
-let parent = child.children;
-console.log(parent);
+// let child = document.getElementById("abs");
+// let parent = child.children;
+// console.log(parent);
 
-let a = document.getElementById("b");
-let sibling = a.previousSibling;
-console.log(sibling);
+// let a = document.getElementById("b");
+// let sibling = a.previousSibling;
+// console.log(sibling);
 
-let x = document.getElementById("b").innerHTML;
-console.log(x);
+// let x = document.getElementById("b").innerHTML;
+// console.log(x);
 
-fetch(" https://pokeapi.co/api/2/pokemon/ditto")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error("not working yaar");
-    } else {
-      return res.json();
-    }
-  })
-  .then((data) => console.log(data))
-  .catch((err) => console.error(err));
+// fetch(" https://pokeapi.co/api/2/pokemon/ditto")
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error("not working yaar");
+//     } else {
+//       return res.json();
+//     }
+//   })
+//   .then((data) => console.log(data))
+//   .catch((err) => console.error (err));
+
+let a = document.querySelector(".box");
+if (a.previousElementSibling === null) {
+  console.log("'noooo");
+} else {
+  console.log(a.previousSibling);
+}
