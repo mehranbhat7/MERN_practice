@@ -1006,17 +1006,35 @@
 // let as = document.querySelector(".head");
 // as.style.cssText =
 //   "color: black; font-size:30px; background-color:pink; border: 3px solid black";
-function move() {
-  let pos = 0;
+// function move() {
+//   let pos = 0;
 
-  const box = document.getElementById("inner");
-  const id = setInterval(frame, 10);
-  function frame() {
-    if (pos == 400) {
-      clearInterval(id);
-    }
-    pos++;
-    box.style.top = pos + "px";
-    box.style.left = pos++ + "px";
-  }
+//   const box = document.getElementById("inner");
+//   const id = setInterval(frame, 10);
+//   function frame() {
+//     if (pos == 400) {
+//       clearInterval(id);
+
+//     }
+//     pos++;
+//     box.style.top = pos + "px";
+//     box.style.left = pos++ + "px";
+//   }
+// }
+
+// function move() {
+//   let a = document.getElementById("outer");
+//   let b = document.getElementById("inner");
+//   a.style.backgroundColor = "red";
+//   b.style.backgroundColor = "blue";
+// }
+
+function mouse() {
+  let a = document.getElementById("inner");
+  a.style.backgroundColor = "yellow";
+}
+
+function out() {
+  let b = document.getElementById("inner");
+  b.style.backgroundColor = "pink";
 }
