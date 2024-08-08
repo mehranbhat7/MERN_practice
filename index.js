@@ -991,8 +991,11 @@
 // let res = parent.firstElementChild.innerHTML;
 // console.log(res);
 
-let a = document.querySelector("h1");
-console.log(a.innerText);
+// let a = document.querySelector("h1");
+// console.log(a.innerText);
 
-let pick = document.querySelector("h1");
-a.insertAdjacentHTML("afterbegin", "<h2>kaise heai ap sabi</h2>");
+// let pick = document.querySelector("h1");
+// a.insertAdjacentHTML("afterbegin", "<h2>kaise heai ap sabi</h2>");
+
+let a = document.querySelector("h1");
+a.outerHTML = "<p>i am very good</p>";
