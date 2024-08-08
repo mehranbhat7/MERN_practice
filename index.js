@@ -979,10 +979,14 @@
 // let arr = [1,2,3,4,5,6,]
 // arr.for
 
-let parent = document.querySelector("head");
-let a = parent.parentNode;
-console.log(a);
+// let parent = document.querySelector("head");
+// let a = parent.parentNode;
+// console.log(a);
 
-let b = document.querySelector(".ab");
-let sib = b.nextSibling;
-console.log(sib);
+// let b = document.querySelector(".ab");
+// let sib = b.nextSibling;
+// console.log(sib);
+
+let parent = document.querySelector("div");
+let res = parent.lastElementChild;
+console.log(res);
