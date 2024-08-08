@@ -964,14 +964,25 @@
 // now.textContent = "mehran";
 // parent.replaceChild(now, tochange);
 
-let ul = document.querySelector("ul");
-let neww = document.createElement("h1");
-neww.textContent = "this is new";
-ul.appendChild(neww);
-console.log(ul);
+// let ul = document.querySelector("ul");
+// let neww = document.createElement("h1");
+// neww.textContent = "this is new";
+// ul.appendChild(neww);
+// console.log(ul);
 
-let parent = document.querySelector("ul");
-let change = parent.children[2];
-let nawa = document.createElement("li");
-nawa.textContent = "cahnged";
-parent.replaceChild(nawa, change);
+// let parent = document.querySelector("ul");
+// let change = parent.children[2];
+// let nawa = document.createElement("li");
+// nawa.textContent = "cahnged";
+// parent.replaceChild(nawa, change);
+
+// let arr = [1,2,3,4,5,6,]
+// arr.for
+
+let parent = document.querySelector("head");
+let a = parent.parentNode;
+console.log(a);
+
+let b = document.querySelector(".ab");
+let sib = b.nextSibling;
+console.log(sib);
