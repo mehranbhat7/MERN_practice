@@ -997,5 +997,12 @@
 // let pick = document.querySelector("h1");
 // a.insertAdjacentHTML("afterbegin", "<h2>kaise heai ap sabi</h2>");
 
-let a = document.querySelector("h1");
-a.outerHTML = "<p>i am very good</p>";
+// document.body.style.backgroundColor = "pink";
+// let heading = document.querySelector(".head");
+// heading.style.color = "blue";
+// heading.style.fontSize = "24px";
+// heading.style.backgroundColor = "white";
+// heading.style.border = "2px solid black";
+let as = document.querySelector(".head");
+as.style.cssText =
+  "color: black; font-size:30px; background-color:pink; border: 3px solid black";
