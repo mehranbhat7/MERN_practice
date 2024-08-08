@@ -99,9 +99,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <h1 class="head" id="box" lull="hen">mehran</h1>
+    <div
+      id="outer"
+      style="
+        width: 600px;
+        height: 600px;
+        background-color: aqua;
+        border-radius: 30px;
+        position: relative;
+      "
+    >
+      <div
+        id="inner"
+        style="
+          width: 200px;
+          height: 200px;
+          background-color: brown;
+          border-radius: 30px;
+          position: absolute;
+        "
+      ></div>
     </div>
+    <button onclick="move()">click</button>
     <script src="index.js"></script>
   </body>
 </html>

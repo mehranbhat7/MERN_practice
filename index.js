@@ -1006,12 +1006,17 @@
 // let as = document.querySelector(".head");
 // as.style.cssText =
 //   "color: black; font-size:30px; background-color:pink; border: 3px solid black";
+function move() {
+  let pos = 0;
 
-let a = document.getElementById("box");
-let val = a.getAttribute("lull");
-
-console.log(val);
-
-let b = document.getElementById("box");
-b.setAttribute("tinn", "meow");
-console.log(b.getAttribute("tinn"));
+  const box = document.getElementById("inner");
+  const id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 400) {
+      clearInterval(id);
+    }
+    pos++;
+    box.style.top = pos + "px";
+    box.style.left = pos++ + "px";
+  }
+}
