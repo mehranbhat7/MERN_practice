@@ -1003,6 +1003,15 @@
 // heading.style.fontSize = "24px";
 // heading.style.backgroundColor = "white";
 // heading.style.border = "2px solid black";
-let as = document.querySelector(".head");
-as.style.cssText =
-  "color: black; font-size:30px; background-color:pink; border: 3px solid black";
+// let as = document.querySelector(".head");
+// as.style.cssText =
+//   "color: black; font-size:30px; background-color:pink; border: 3px solid black";
+
+let a = document.getElementById("box");
+let val = a.getAttribute("lull");
+
+console.log(val);
+
+let b = document.getElementById("box");
+b.setAttribute("tinn", "meow");
+console.log(b.getAttribute("tinn"));
