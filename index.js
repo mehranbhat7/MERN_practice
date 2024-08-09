@@ -1047,8 +1047,15 @@
 //   let a = document.getElementById("outer");
 //   a.style.backgroundColor = "blue";
 // }
-let a = document.getElementById("btn").addEventListener("mouseover", fun);
-function fun() {
-  let b = document.getElementById("inner");
-  b.style.backgroundColor = "orange";
-}
+document.getElementById("ist").addEventListener("click", function () {
+  console.log("ist div was clicked");
+});
+document.getElementById("sec").addEventListener("click", function () {
+  console.log("second div was clicked");
+});
+document.getElementById("par").addEventListener("click", function () {
+  console.log("iparagraph div was clicked");
+});
+document.getElementById("btn").addEventListener("click", function () {
+  console.log("button div was clicked");
+});
