@@ -1046,16 +1046,14 @@
 // function mouseup() {
 //   let a = document.getElementById("outer");
 //   a.style.backgroundColor = "blue";
-// }
-document.getElementById("ist").addEventListener("click", function () {
-  console.log("ist div was clicked");
-});
-document.getElementById("sec").addEventListener("click", function () {
-  console.log("second div was clicked");
-});
-document.getElementById("par").addEventListener("click", function () {
-  console.log("iparagraph div was clicked");
-});
-document.getElementById("btn").addEventListener("click", function () {
-  console.log("button div was clicked");
+//div
+
+document.getElementById("ist").addEventListener("click", (event) => {
+  if (event.target.tagName == "DIV") {
+    console.log("clicked on div");
+  } else if (event.target.tagName == "P") {
+    console.log("clicked paragraphn");
+  } else {
+    console.log("clicked button");
+  }
 });
