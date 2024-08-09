@@ -1039,11 +1039,16 @@
 //   b.style.backgroundColor = "pink";
 // }
 
-function mousedown() {
-  let a = document.getElementById("outer");
-  a.style.backgroundColor = "red";
-}
-function mouseup() {
-  let a = document.getElementById("outer");
-  a.style.backgroundColor = "blue";
+// function mousedown() {
+//   let a = document.getElementById("outer");
+//   a.style.backgroundColor = "red";
+// }
+// function mouseup() {
+//   let a = document.getElementById("outer");
+//   a.style.backgroundColor = "blue";
+// }
+let a = document.getElementById("btn").addEventListener("mouseover", fun);
+function fun() {
+  let b = document.getElementById("inner");
+  b.style.backgroundColor = "orange";
 }
