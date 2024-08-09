@@ -1048,12 +1048,25 @@
 //   a.style.backgroundColor = "blue";
 //div
 
-document.getElementById("ist").addEventListener("click", (event) => {
-  if (event.target.tagName == "DIV") {
-    console.log("clicked on div");
-  } else if (event.target.tagName == "P") {
-    console.log("clicked paragraphn");
-  } else {
-    console.log("clicked button");
-  }
-});
+// document.getElementById("ist").addEventListener("click", (event) => {
+//   if (event.target.tagName == "DIV") {
+//     console.log("clicked on div");
+//   } else if (event.target.tagName == "P") {
+//     console.log("clicked paragraphn");
+//   } else {
+//     console.log("clicked button");
+//   }
+// });
+let user = prompt("enter your name");
+if (user != null) {
+  console.log("welcome " + user + " ! ");
+} else {
+  log("Please enter your name");
+}
+
+let agreement = confirm("are you ready to invest ?");
+if (agreement) {
+  console.log("you are on board " + user);
+} else {
+  console.log(user + " you aere a looser");
+}
