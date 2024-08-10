@@ -1171,14 +1171,56 @@
 //     stat.textContent = `key is up`;
 //   }
 // }
-let inpu = document.getElementById("inp");
-let boot = document.getElementById("button");
-function blurr() {
-  inpu.style.backgroundColor = "yellow";
-}
-function focuss() {
-  inpu.style.backgroundColor = "pink";
-}
-function sub() {
-  alert(`${inpu.value}`);
+// let inpu = document.getElementById("inp");
+// let boot = document.getElementById("button");
+// function blurr() {
+//   inpu.style.backgroundColor = "yellow";
+// }
+// function focuss() {
+//   inpu.style.backgroundColor = "pink";
+// }
+// function sub() {
+//   alert(`${inpu.value}`);
+// }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//TO DO APPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPpppppppppppppppppppppppppppp
+const write = document.getElementById("write");
+const todoo = document.getElementById("todo");
+
+write.addEventListener("keyup", function (e) {
+  if (e.key == "Enter") {
+    addtodo(this.value);
+    this.value = "";
+  }
+});
+function addtodo(value) {
+  const li = document.createElement("li");
+  li.textContent = value;
+  todoo.appendChild(li);
+
+  li.addEventListener("click", function () {
+    this.classList.toggle("done");
+  });
 }
