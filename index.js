@@ -1095,34 +1095,68 @@
 
 //KEY LOGGER PROJECT
 //LETS GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-const startbtn = document.querySelector(".start");
-const stopbtn = document.querySelector(".stop");
-const loug = document.querySelector(".log");
-const sitate = document.querySelector(".state");
+// const startbtn = document.querySelector(".start");
+// const stopbtn = document.querySelector(".stop");
+// const loug = document.querySelector(".log");
+// const sitate = document.querySelector(".state");
+
+// let recording = false;
+// startbtn.addEventListener("click", () => {
+//   recording = true;
+//   document.addEventListener("keydown", down);
+//   document.addEventListener("keyup", upp);
+// });
+// stopbtn.addEventListener("click", () => {
+//   recording = false;
+//   document.addEventListener("keydown", down);
+//   document.addEventListener("keyup", upp);
+//   loug.textContent = "";
+//   sitate.textContent = " ";
+// });
+
+// function down(e) {
+//   if (recording) {
+//     loug.textContent = `you pressed ${e.key} key `;
+//     sitate.textContent = `key is down`;
+//   }
+// }
+// function upp(e) {
+//   if (recording) {
+//     loug.textContent = `you released ${e.key} key `;
+//     sitate.textContent = `key is up`;
+//   }
+// }
+
+//sooooo thats itttttt of key LOGGERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+
+const start = document.querySelector(".start");
+const stops = document.querySelector(".stop");
+const logging = document.querySelector(".log");
+const stat = document.querySelector(".state");
 
 let recording = false;
-startbtn.addEventListener("click", () => {
+start.addEventListener("click", () => {
   recording = true;
-  document.addEventListener("keydown", down);
-  document.addEventListener("keyup", upp);
+  document.addEventListener("keydown", downe);
+  document.addEventListener("keyup", upe);
 });
-stopbtn.addEventListener("click", () => {
+stops.addEventListener("click", () => {
   recording = false;
   document.addEventListener("keydown", down);
-  document.addEventListener("keyup", upp);
-  loug.textContent = "";
-  sitate.textContent = " ";
+  document.addEventListener("keyup", up);
+  logging.textContent = "";
+  stat.textContent = "";
 });
-
-function down(e) {
+function downe(e) {
   if (recording) {
-    loug.textContent = `you pressed ${e.key} key `;
-    sitate.textContent = `key is down`;
+    logging.textContent = `you presses ${e.key} key`;
+    stat.textContent = `key is down`;
   }
 }
-function upp(e) {
+
+function upe(e) {
   if (recording) {
-    loug.textContent = `you released ${e.key} key `;
-    sitate.textContent = `key is up`;
+    logging.textContent = `you Released ${e.key} key`;
+    stat.textContent = `key is up`;
   }
 }
