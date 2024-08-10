@@ -1057,16 +1057,72 @@
 //     console.log("clicked button");
 //   }
 // });
-let user = prompt("enter your name");
-if (user != null) {
-  console.log("welcome " + user + " ! ");
-} else {
-  log("Please enter your name");
-}
+// let user = prompt("enter your name");
+// if (user != null) {
+//   console.log("welcome " + user + " ! ");
+// } else {
+//   log("Please enter your name");
+// }
 
-let agreement = confirm("are you ready to invest ?");
-if (agreement) {
-  console.log("you are on board " + user);
-} else {
-  console.log(user + " you aere a looser");
+// let agreement = confirm("are you ready to invest ?");
+// if (agreement) {
+//   console.log("you are on board " + user);
+// } else {
+//   console.log(user + " you aere a looser");
+// }
+
+// let div = document.getElementById("div");
+// div.addEventListener("click", (event) => {
+//   if (event.target.tagName == "DIV") {
+//     console.log("you clicked div");
+//   }
+// });
+// let sp = document.getElementById("sp");
+// sp.addEventListener("click", (event) => {
+//   if (event.target.tagName == "SPAN") {
+//     console.log("you clicked span");
+//   }
+// });
+
+// let btn = document.getElementsByClassName("btn");
+// btn.addEventListener("click", (event) => {
+//   if (event.target.tagName == "BUTTON") {
+//     console.log("you clicked button");
+//   }
+// });
+// let a = document.getElementById("btn");
+// console.log(a.getBoundingClientRect().x);
+
+//KEY LOGGER PROJECT
+//LETS GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+const startbtn = document.querySelector(".start");
+const stopbtn = document.querySelector(".stop");
+const loug = document.querySelector(".log");
+const sitate = document.querySelector(".state");
+
+let recording = false;
+startbtn.addEventListener("click", () => {
+  recording = true;
+  document.addEventListener("keydown", down);
+  document.addEventListener("keyup", upp);
+});
+stopbtn.addEventListener("click", () => {
+  recording = false;
+  document.addEventListener("keydown", down);
+  document.addEventListener("keyup", upp);
+  loug.textContent = "";
+  sitate.textContent = " ";
+});
+
+function down(e) {
+  if (recording) {
+    loug.textContent = `you pressed ${e.key} key `;
+    sitate.textContent = `key is down`;
+  }
+}
+function upp(e) {
+  if (recording) {
+    loug.textContent = `you released ${e.key} key `;
+    sitate.textContent = `key is up`;
+  }
 }
