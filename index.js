@@ -1094,6 +1094,17 @@
 // console.log(a.getBoundingClientRect().x);
 
 //KEY LOGGER PROJECT
+//
+//
+//
+//
+//
+//
+// /
+///
+//
+//
+
 //LETS GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 // const startbtn = document.querySelector(".start");
 // const stopbtn = document.querySelector(".stop");
@@ -1129,34 +1140,45 @@
 
 //sooooo thats itttttt of key LOGGERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 
-const start = document.querySelector(".start");
-const stops = document.querySelector(".stop");
-const logging = document.querySelector(".log");
-const stat = document.querySelector(".state");
+// const start = document.querySelector(".start");
+// const stops = document.querySelector(".stop");
+// const logging = document.querySelector(".log");
+// const stat = document.querySelector(".state");
 
-let recording = false;
-start.addEventListener("click", () => {
-  recording = true;
-  document.addEventListener("keydown", downe);
-  document.addEventListener("keyup", upe);
-});
-stops.addEventListener("click", () => {
-  recording = false;
-  document.addEventListener("keydown", down);
-  document.addEventListener("keyup", up);
-  logging.textContent = "";
-  stat.textContent = "";
-});
-function downe(e) {
-  if (recording) {
-    logging.textContent = `you presses ${e.key} key`;
-    stat.textContent = `key is down`;
-  }
+// let recording = false;
+// start.addEventListener("click", () => {
+//   recording = true;
+//   document.addEventListener("keydown", downe);
+//   document.addEventListener("keyup", upe);
+// });
+// stops.addEventListener("click", () => {
+//   recording = false;
+//   document.addEventListener("keydown", down);
+//   document.addEventListener("keyup", up);
+//   logging.textContent = "";
+//   stat.textContent = "";
+// });
+// function downe(e) {
+//   if (recording) {
+//     logging.textContent = `you presses ${e.key} key`;
+//     stat.textContent = `key is down`;
+//   }
+// }
+
+// function upe(e) {
+//   if (recording) {
+//     logging.textContent = `you Released ${e.key} key`;
+//     stat.textContent = `key is up`;
+//   }
+// }
+let inpu = document.getElementById("inp");
+let boot = document.getElementById("button");
+function blurr() {
+  inpu.style.backgroundColor = "yellow";
 }
-
-function upe(e) {
-  if (recording) {
-    logging.textContent = `you Released ${e.key} key`;
-    stat.textContent = `key is up`;
-  }
+function focuss() {
+  inpu.style.backgroundColor = "pink";
+}
+function sub() {
+  alert(`${inpu.value}`);
 }
