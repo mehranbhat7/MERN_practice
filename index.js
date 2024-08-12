@@ -1245,5 +1245,29 @@
 //
 //
 //TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-let a = -4.78;
-console.log(Math.floor(a));
+//
+//
+//
+//
+//
+//
+//
+//
+//COUNTDOWN 2025
+
+const Targetdate = new Date("2025-01-01T00:00:00");
+function updateddate() {
+  const Currentdate = new Date();
+  const Timediff = Targetdate - Currentdate;
+  const days = Math.floor(Timediff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (Timediff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((Timediff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((Timediff % (1000 * 60)) / 1000);
+  document.getElementById(
+    "countdown"
+  ).innerHTML = `${days}DAYS ${hours} HOURS ${minutes} MINUTES ${seconds} SECONDS`;
+  setTimeout(updateddate, 1000);
+}
+updateddate();
