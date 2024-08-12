@@ -1206,24 +1206,24 @@
 //
 //
 //TO DO APPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPpppppppppppppppppppppppppppp
-const write = document.getElementById("write");
-const todoo = document.getElementById("todo");
+// const write = document.getElementById("write");
+// const todoo = document.getElementById("todo");
 
-write.addEventListener("keyup", function (e) {
-  if (e.key == "Enter") {
-    addtodo(this.value);
-    this.value = "";
-  }
-});
-function addtodo(value) {
-  const li = document.createElement("li");
-  li.textContent = value;
-  todoo.appendChild(li);
+// write.addEventListener("keyup", function (e) {
+//   if (e.key == "Enter") {
+//     addtodo(this.value);
+//     this.value = "";
+//   }
+// });
+// function addtodo(value) {
+//   const li = document.createElement("li");
+//   li.textContent = value;
+//   todoo.appendChild(li);
 
-  li.addEventListener("click", function () {
-    this.classList.toggle("done");
-  });
-}
+//   li.addEventListener("click", function () {
+//     this.classList.toggle("done");
+//   });
+// }
 
 //
 //
@@ -1245,3 +1245,10 @@ function addtodo(value) {
 //
 //
 //TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+let updated = arr.map((vals, index, arr) => {
+  return vals * vals;
+});
+console.log(updated);
+console.log(arr);
