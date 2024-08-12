@@ -1255,10 +1255,10 @@
 //
 //COUNTDOWN 2025
 
-const Targetdate = new Date("2025-01-01T00:00:00");
-function updateddate() {
-  const Currentdate = new Date();
-  const Timediff = Targetdate - Currentdate;
+const Targetdate = new Date("2026-01-01T00:00:00");
+function updateted() {
+  const currentdate = new Date();
+  const Timediff = Targetdate - currentdate;
   const days = Math.floor(Timediff / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (Timediff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -1267,7 +1267,7 @@ function updateddate() {
   const seconds = Math.floor((Timediff % (1000 * 60)) / 1000);
   document.getElementById(
     "countdown"
-  ).innerHTML = `${days}DAYS ${hours} HOURS ${minutes} MINUTES ${seconds} SECONDS`;
-  setTimeout(updateddate, 1000);
+  ).innerHTML = ` ${days} DAYS ${minutes} MINUTES ${seconds} SECONDS `;
+  setTimeout(updateted, 1000);
 }
-updateddate();
+updateted();
