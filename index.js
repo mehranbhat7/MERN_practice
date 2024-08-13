@@ -1288,17 +1288,3 @@
 //
 //
 //COUNTDOWN
-
-fetch("https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json")
-  .then((res, rej) => {
-    if (!res.ok) {
-      throw new Error("npooot okkkkk");
-    }
-    return res.json();
-  })
-  .then((data) => {
-    data.forEach((ele) => {
-      console.log(ele.language);
-    });
-  })
-  .catch((err) => console.error(err));
