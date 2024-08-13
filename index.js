@@ -1255,19 +1255,50 @@
 //
 //COUNTDOWN 2025
 
-const Targetdate = new Date("2026-01-01T00:00:00");
-function updateted() {
-  const currentdate = new Date();
-  const Timediff = Targetdate - currentdate;
-  const days = Math.floor(Timediff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (Timediff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((Timediff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((Timediff % (1000 * 60)) / 1000);
-  document.getElementById(
-    "countdown"
-  ).innerHTML = ` ${days} DAYS ${minutes} MINUTES ${seconds} SECONDS `;
-  setTimeout(updateted, 1000);
-}
-updateted();
+// const Targetdate = new Date("2026-01-01T00:00:00");
+// function updateted() {
+//   const currentdate = new Date();
+//   const Timediff = Targetdate - currentdate;
+//   const days = Math.floor(Timediff / (1000 * 60 * 60 * 24));
+//   const hours = Math.floor(
+//     (Timediff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+//   );
+//   const minutes = Math.floor((Timediff % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((Timediff % (1000 * 60)) / 1000);
+//   document.getElementById(
+//     "countdown"
+//   ).innerHTML = ` ${days} DAYS ${hours} HOURS ${minutes} MINUTES ${seconds} SECONDS `;
+//   setTimeout(updateted, 1000);
+// }
+// updateted();
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//COUNTDOWN
+
+fetch("https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json")
+  .then((res, rej) => {
+    if (!res.ok) {
+      throw new Error("npooot okkkkk");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    data.forEach((ele) => {
+      console.log(ele.language);
+    });
+  })
+  .catch((err) => console.error(err));
