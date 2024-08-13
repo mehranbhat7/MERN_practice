@@ -1294,26 +1294,25 @@ const btn = document.getElementById("btn");
 const wrong = document.getElementById("wrng");
 const guesses = document.getElementById("guesses");
 
-const answer = Math.floor(Math.random() * 100) + 1;
-console.log(answer);
-let numguess = 0;
+const answ = Math.floor(Math.random() * 100) + 1;
+numguess = 0;
 btn.addEventListener("click", () => {
-  guessnumber();
+  guessnum();
 });
-function guessnumber() {
-  if (innput.value < 1 || innput.value > 100) {
-    wrong.innerHTML = "it is not valid number";
+function guessnum() {
+  if (innput.value > 100 || innput.value < 1) {
+    wrong.innerHTML = " NOT VALID NUMBER ";
   } else {
     numguess++;
-    guesses.innerHTML = `no of guesses:${numguess}`;
-    if (innput.value > answer) {
-      wrong.innerHTML = "Tooo High";
+    guesses.innerHTML = `no of Guesses : ${numguess}`;
+    if (innput.value > answ) {
+      wrong.innerHTML = "TOO HIGH";
       innput.value = "";
-    } else if (innput.value < answer) {
-      wrong.innerHTML = "Too Low";
+    } else if (innput.value < answ) {
+      wrong.innerHTML = "TOO LOW";
       innput.value = "";
     } else {
-      wrong.innerHTML = " Congratulations you Got the right Answer";
+      wrong.innerHTML = "CONGRATULATIONS";
     }
   }
 }
