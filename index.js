@@ -1288,3 +1288,32 @@
 //
 //
 //COUNTDOWN
+
+const innput = document.getElementById("text");
+const btn = document.getElementById("btn");
+const wrong = document.getElementById("wrng");
+const guesses = document.getElementById("guesses");
+
+const answer = Math.floor(Math.random() * 100) + 1;
+console.log(answer);
+let numguess = 0;
+btn.addEventListener("click", () => {
+  guessnumber();
+});
+function guessnumber() {
+  if (innput.value < 1 || innput.value > 100) {
+    wrong.innerHTML = "it is not valid number";
+  } else {
+    numguess++;
+    guesses.innerHTML = `no of guesses:${numguess}`;
+    if (innput.value > answer) {
+      wrong.innerHTML = "Tooo High";
+      innput.value = "";
+    } else if (innput.value < answer) {
+      wrong.innerHTML = "Too Low";
+      innput.value = "";
+    } else {
+      wrong.innerHTML = " Congratulations you Got the right Answer";
+    }
+  }
+}
