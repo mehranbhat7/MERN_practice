@@ -1316,8 +1316,23 @@
 //     }
 //   }
 // }
+let students = [
+  "huzaif",
+  "aqib",
+  "farzan",
+  "fayaz",
+  "farhaan",
+  "mohsin",
+  "raqib",
+];
 
-let user = (name) => {
-  console.log(` hello ${name}`);
-};
-user("ali");
+let students2 = [
+  "ahmed",
+  "ali",
+  "mohammad",
+  "muhammad",
+  "ibrahim",
+  "waseem",
+  "waheed",
+];
+console.log(students, students2);
