@@ -1316,15 +1316,13 @@
 //     }
 //   }
 // }
-let students = [
-  "huzaif",
-  "farzan",
-  "hatiom",
-  "ali",
-  "farhaan",
-  "qais",
-  "danish",
-  "dawood",
-];
-let res = students.filter((stude) => stude.startsWith("d"));
-console.log(res);
+let user = {
+  name: "ab majeed",
+  age: 60,
+  married: true,
+  greet: function () {
+    console.log("hellow");
+  },
+  child: 3,
+};
+console.log(user.greet());
