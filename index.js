@@ -1317,11 +1317,18 @@
 //   }
 // }
 
-let age = 8;
-if (age >= 18) {
-  console.log("you can apply for driving licence");
-} else if (age < 18 && age > 10) {
-  console.log("sorry! you cannot apply ");
-} else {
-  console.log("you have to wait 8 years ");
+for (i = 0; i <= 20; i++) {
+  console.log(`${i} my name is mehran`);
 }
+
+let age = 10;
+while (age <= 25) {
+  console.log(age);
+  age++;
+}
+
+let num = 5;
+do {
+  console.log(num);
+  num++;
+} while (num <= 3);
