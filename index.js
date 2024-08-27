@@ -1289,30 +1289,34 @@
 //
 //COUNTDOWN
 
-const innput = document.getElementById("text");
-const btn = document.getElementById("btn");
-const wrong = document.getElementById("wrng");
-const guesses = document.getElementById("guesses");
+// const innput = document.getElementById("text");
+// const btn = document.getElementById("btn");
+// const wrong = document.getElementById("wrng");
+// const guesses = document.getElementById("guesses");
 
-const answ = Math.floor(Math.random() * 100) + 1;
-numguess = 0;
-btn.addEventListener("click", () => {
-  guessnum();
-});
-function guessnum() {
-  if (innput.value > 100 || innput.value < 1) {
-    wrong.innerHTML = " NOT VALID NUMBER ";
-  } else {
-    numguess++;
-    guesses.innerHTML = `no of Guesses : ${numguess}`;
-    if (innput.value > answ) {
-      wrong.innerHTML = "TOO HIGH";
-      innput.value = "";
-    } else if (innput.value < answ) {
-      wrong.innerHTML = "TOO LOW";
-      innput.value = "";
-    } else {
-      wrong.innerHTML = "CONGRATULATIONS";
-    }
-  }
-}
+// const answ = Math.floor(Math.random() * 100) + 1;
+// numguess = 0;
+// btn.addEventListener("click", () => {
+//   guessnum();
+// });
+// function guessnum() {
+//   if (innput.value > 100 || innput.value < 1) {
+//     wrong.innerHTML = " NOT VALID NUMBER ";
+//   } else {
+//     numguess++;
+//     guesses.innerHTML = `no of Guesses : ${numguess}`;
+//     if (innput.value > answ) {
+//       wrong.innerHTML = "TOO HIGH";
+//       innput.value = "";
+//     } else if (innput.value < answ) {
+//       wrong.innerHTML = "TOO LOW";
+//       innput.value = "";
+//     } else {
+//       wrong.innerHTML = "CONGRATULATIONS";
+//     }
+//   }
+// }
+
+let name = 20;
+name = String(name);
+console.log(typeof name);
