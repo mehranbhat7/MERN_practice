@@ -1317,6 +1317,11 @@
 //   }
 // }
 
-let name = 20;
-name = String(name);
-console.log(typeof name);
+let age = 8;
+if (age >= 18) {
+  console.log("you can apply for driving licence");
+} else if (age < 18 && age > 10) {
+  console.log("sorry! you cannot apply ");
+} else {
+  console.log("you have to wait 8 years ");
+}
