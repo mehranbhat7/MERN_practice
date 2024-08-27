@@ -1317,18 +1317,7 @@
 //   }
 // }
 
-for (i = 0; i <= 20; i++) {
-  console.log(`${i} my name is mehran`);
-}
-
-let age = 10;
-while (age <= 25) {
-  console.log(age);
-  age++;
-}
-
-let num = 5;
-do {
-  console.log(num);
-  num++;
-} while (num <= 3);
+let user = (name) => {
+  console.log(` hello ${name}`);
+};
+user("ali");
