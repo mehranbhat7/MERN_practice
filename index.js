@@ -1316,13 +1316,20 @@
 //     }
 //   }
 // }
-setTimeout(() => {
-  function user(name) {
-    console.log(`hello ${name}`);
-  }
-  user("majeed");
-}, 3000);
+let list = document.getElementById("list");
+fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: `);
+    }
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data);
 
-function user() {
-  console.log("hello");
-}
+    data.map((ele) => {
+      const li = document.createElement("li");
+      li.innerHTML = ele.name;
+      list.appendChild(li);
+    });
+  });
