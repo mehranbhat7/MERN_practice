@@ -1316,13 +1316,13 @@
 //     }
 //   }
 // }
-let user = {
-  name: "ab majeed",
-  age: 60,
-  married: true,
-  greet: function () {
-    console.log("hellow");
-  },
-  child: 3,
-};
-console.log(user.greet());
+setTimeout(() => {
+  function user(name) {
+    console.log(`hello ${name}`);
+  }
+  user("majeed");
+}, 3000);
+
+function user() {
+  console.log("hello");
+}
