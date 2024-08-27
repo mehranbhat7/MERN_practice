@@ -1318,21 +1318,13 @@
 // }
 let students = [
   "huzaif",
-  "aqib",
   "farzan",
-  "fayaz",
-  "farhaan",
-  "mohsin",
-  "raqib",
-];
-
-let students2 = [
-  "ahmed",
+  "hatiom",
   "ali",
-  "mohammad",
-  "muhammad",
-  "ibrahim",
-  "waseem",
-  "waheed",
+  "farhaan",
+  "qais",
+  "danish",
+  "dawood",
 ];
-console.log(students, students2);
+let res = students.filter((stude) => stude.startsWith("d"));
+console.log(res);
