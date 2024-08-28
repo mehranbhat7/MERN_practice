@@ -1329,19 +1329,25 @@
 // console.log(next);
 // Ensure the ID matches an existing element in your HTML
 // Replace 'div' with the correct ID of your element
-let inpp = document.getElementById("inpp");
-let list = document.getElementById("list");
-inpp.addEventListener("keyup", (e) => {
-  if (e.key === "Enter") {
-    addtodo(e.target.value);
-    e.target.value = "";
-  }
+let btn = document.getElementById("btn");
+let inpp = document.getElementById("inp");
+let wrng = document.getElementById("wrng");
+let guess = document.getElementById("guess");
+const ans = Math.floor(Math.random() * 100) + 1;
+let numguess = 0;
+btn.addEventListener("click", function () {
+  guessnum();
 });
-function addtodo(val) {
-  let data = document.createElement("li");
-  data.innerHTML = val;
-  list.appendChild(data);
-  data.addEventListener("click", function () {
-    data.classList.toggle("done");
-  });
+function guessnum() {
+  if (inpp.value > 100 || inpp.value < 1) {
+    wrng.innerHTML = "your inpunt is invalid";
+  } else if (inpp.value > ans) {
+    wrng.innerHTML = "Too high";
+    inpp.value = "";
+  } else if (inpp.value < ans) {
+    wrng.innerHTML = "Too low";
+    inpp.value = "";
+  } else {
+    wrng.innerHTML = "Congratulations";
+  }
 }
