@@ -1328,16 +1328,20 @@
 // let next = sib.nextSibling;
 // console.log(next);
 // Ensure the ID matches an existing element in your HTML
-let a = document.getElementById("div"); // Replace 'div' with the correct ID of your element
-
-a.addEventListener("click", (e) => {
-  if (e.target.tagName === "DIV") {
-    console.log("div was clicked");
-  } else if (e.target.tagName === "H1") {
-    console.log("h1 was clicked");
-  } else if (e.target.tagName === "P") {
-    console.log("p was clicked");
-  } else {
-    console.log("Button was clicked");
+// Replace 'div' with the correct ID of your element
+let inpp = document.getElementById("inpp");
+let list = document.getElementById("list");
+inpp.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    addtodo(e.target.value);
+    e.target.value = "";
   }
 });
+function addtodo(val) {
+  let data = document.createElement("li");
+  data.innerHTML = val;
+  list.appendChild(data);
+  data.addEventListener("click", function () {
+    data.classList.toggle("done");
+  });
+}
