@@ -1316,7 +1316,14 @@
 //     }
 //   }
 // }
-let list = document.getElementById("list");
-let text = document.createElement("li");
-text.innerHTML = "this is javaScript practice";
-list.appendChild(text);
+let child = document.querySelector(".child");
+let parent = child.parentNode;
+console.log(parent);
+
+let parent1 = document.getElementById("parent");
+let child1 = parent1.childNodes[2];
+console.log(child1);
+
+let sib = document.querySelector(".child");
+let next = sib.nextSibling;
+console.log(next);
