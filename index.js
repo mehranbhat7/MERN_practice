@@ -1317,19 +1317,6 @@
 //   }
 // }
 let list = document.getElementById("list");
-fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: `);
-    }
-    return res.json();
-  })
-  .then((data) => {
-    console.log(data);
-
-    data.map((ele) => {
-      const li = document.createElement("li");
-      li.innerHTML = ele.name;
-      list.appendChild(li);
-    });
-  });
+let text = document.createElement("li");
+text.innerHTML = "this is javaScript practice";
+list.appendChild(text);
