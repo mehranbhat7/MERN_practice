@@ -1316,14 +1316,20 @@
 //     }
 //   }
 // }
-let child = document.querySelector(".child");
-let parent = child.parentNode;
-console.log(parent);
+// let child = document.querySelector(".child");
+// let parent = child.parentNode;
+// console.log(parent);
 
-let parent1 = document.getElementById("parent");
-let child1 = parent1.childNodes[2];
-console.log(child1);
+// let parent1 = document.getElementById("parent");
+// let child1 = parent1.childNodes[2];
+// console.log(child1);
 
-let sib = document.querySelector(".child");
-let next = sib.nextSibling;
-console.log(next);
+// let sib = document.querySelector(".child");
+// let next = sib.nextSibling;
+// console.log(next);
+
+let parent = document.getElementById("parent");
+let old = parent.children[2];
+let news = document.createElement("p");
+news.innerHTML = "This has been replaced";
+parent.replaceChild(news, old);
