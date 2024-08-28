@@ -1327,13 +1327,17 @@
 // let sib = document.querySelector(".child");
 // let next = sib.nextSibling;
 // console.log(next);
-let box = document.getElementById("box");
-let tag = document.getElementsByTagName("p");
-function mousedown() {
-  box.style.backgroundColor = "yellow";
-  box.style.borderRadius = "30px";
-}
-function mouseup() {
-  box.style.backgroundColor = "blue";
-  box.style.borderRadius = "30px";
-}
+// Ensure the ID matches an existing element in your HTML
+let a = document.getElementById("div"); // Replace 'div' with the correct ID of your element
+
+a.addEventListener("click", (e) => {
+  if (e.target.tagName === "DIV") {
+    console.log("div was clicked");
+  } else if (e.target.tagName === "H1") {
+    console.log("h1 was clicked");
+  } else if (e.target.tagName === "P") {
+    console.log("p was clicked");
+  } else {
+    console.log("Button was clicked");
+  }
+});
