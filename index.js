@@ -1329,7 +1329,6 @@
 // console.log(next);
 
 let parent = document.getElementById("parent");
-let old = parent.children[2];
-let news = document.createElement("p");
-news.innerHTML = "This has been replaced";
-parent.replaceChild(news, old);
+let lastchild = parent.firstElementChild;
+
+console.log(lastchild);
