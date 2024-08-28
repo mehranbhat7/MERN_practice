@@ -1327,9 +1327,13 @@
 // let sib = document.querySelector(".child");
 // let next = sib.nextSibling;
 // console.log(next);
-
-let parent = document.getElementById("parent");
-let mehran = document.querySelector(".child");
-function handle() {
-  mehran.style.color = "red";
+let box = document.getElementById("box");
+let tag = document.getElementsByTagName("p");
+function mousedown() {
+  box.style.backgroundColor = "yellow";
+  box.style.borderRadius = "30px";
+}
+function mouseup() {
+  box.style.backgroundColor = "blue";
+  box.style.borderRadius = "30px";
 }
