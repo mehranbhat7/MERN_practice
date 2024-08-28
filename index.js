@@ -1329,6 +1329,7 @@
 // console.log(next);
 
 let parent = document.getElementById("parent");
-let lastchild = parent.firstElementChild;
-
-console.log(lastchild);
+let mehran = document.querySelector(".child");
+function handle() {
+  mehran.style.color = "red";
+}
