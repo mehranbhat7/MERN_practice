@@ -1329,25 +1329,45 @@
 // console.log(next);
 // Ensure the ID matches an existing element in your HTML
 // Replace 'div' with the correct ID of your element
-let btn = document.getElementById("btn");
-let inpp = document.getElementById("inp");
-let wrng = document.getElementById("wrng");
-let guess = document.getElementById("guess");
-const ans = Math.floor(Math.random() * 100) + 1;
-let numguess = 0;
-btn.addEventListener("click", function () {
-  guessnum();
+// let btn = document.getElementById("btn");
+// let inpp = document.getElementById("inp");
+// let wrng = document.getElementById("wrng");
+// let guess = document.getElementById("guess");
+// const ans = Math.floor(Math.random() * 100) + 1;
+// let numguess = 0;
+// btn.addEventListener("click", function () {
+//   guessnum();
+// });
+// function guessnum() {
+//   if (inpp.value > 100 || inpp.value < 1) {
+//     wrng.innerHTML = "your inpunt is invalid";
+//   } else if (inpp.value > ans) {
+//     wrng.innerHTML = "Too high";
+//     inpp.value = "";
+//   } else if (inpp.value < ans) {
+//     wrng.innerHTML = "Too low";
+//     inpp.value = "";
+//   } else {
+//     wrng.innerHTML = "Congratulations";
+//   }
+// }
+let result = document.getElementById("result");
+let btn = document.querySelectorAll("button");
+btn.forEach((ele) => {
+  ele.addEventListener("click", (e) => {
+    let value = e.target.value || e.target.innerText;
+    if (e.target.value === "C") {
+      result.innerHTML = "";
+    } else if (e.target.value === "|") {
+      result.innerHTML = result.innerHTML.slice(0, -1);
+    } else if (e.target.value === "=") {
+      try {
+        result.innerHTML = eval(result.innerHTML);
+      } catch {
+        result.innerHTML = "Error";
+      }
+    } else {
+      result.innerHTML += value;
+    }
+  });
 });
-function guessnum() {
-  if (inpp.value > 100 || inpp.value < 1) {
-    wrng.innerHTML = "your inpunt is invalid";
-  } else if (inpp.value > ans) {
-    wrng.innerHTML = "Too high";
-    inpp.value = "";
-  } else if (inpp.value < ans) {
-    wrng.innerHTML = "Too low";
-    inpp.value = "";
-  } else {
-    wrng.innerHTML = "Congratulations";
-  }
-}
