@@ -1389,6 +1389,7 @@ function getweather() {
       return res.json();
     })
     .then((data) => {
+      output.innerHTML = "";
       let city = document.createElement("h5");
       city.innerHTML = data.name;
       output.appendChild(city);
@@ -1397,6 +1398,6 @@ function getweather() {
       output.appendChild(temp);
     })
     .catch((err) => {
-      console.log(err);
+      output.innerHTML = "erroe haw aaaw";
     });
 }
