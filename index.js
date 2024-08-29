@@ -1351,22 +1351,52 @@
 //     wrng.innerHTML = "Congratulations";
 //   }
 // }
+// let btn = document.getElementById("btn");
+// let quote = document.getElementById("quotes");
+// let texts = [
+//   "The journey of a thousand miles begins with a single step.",
+//   "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+//   "Believe you can and you're halfway there.",
+//   "Suffering has been stronger than all other teaching, for it has taught me to understand the world around me better.",
+//   "The greatest accomplishment is not in never falling, but in rising again after falling.",
+//   "When you reach the end of your rope, tie a knot in it and hang on.",
+//   "The only way to do great work is to love what you do.",
+//   "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+//   "If you can dream it, you can achieve it.",
+//   "The most difficult thing is not to stop questioning.",
+//   "Don't let fear hold you back. Embrace",
+// ];
+// btn.addEventListener("click", () => {
+//   let random = Math.floor(Math.random() * texts.length);
+//   quote.innerHTML = texts[random];
+// });
+
+let inpu = document.getElementById("inp");
 let btn = document.getElementById("btn");
-let quote = document.getElementById("quotes");
-let texts = [
-  "The journey of a thousand miles begins with a single step.",
-  "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
-  "Believe you can and you're halfway there.",
-  "Suffering has been stronger than all other teaching, for it has taught me to understand the world around me better.",
-  "The greatest accomplishment is not in never falling, but in rising again after falling.",
-  "When you reach the end of your rope, tie a knot in it and hang on.",
-  "The only way to do great work is to love what you do.",
-  "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-  "If you can dream it, you can achieve it.",
-  "The most difficult thing is not to stop questioning.",
-  "Don't let fear hold you back. Embrace",
-];
-btn.addEventListener("click", () => {
-  let random = Math.floor(Math.random() * texts.length);
-  quote.innerHTML = texts[random];
+let output = document.getElementById("output");
+btn.addEventListener("click", function () {
+  getweather();
+  inpu.value = "";
 });
+function getweather() {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${inpu.value}&appid=aab01c15c2c40b906f4c1af2961dd801`
+  )
+    .then((res, rej) => {
+      if (!res.ok) {
+        throw new Error("jkdsha");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      let city = document.createElement("h5");
+      city.innerHTML = data.name;
+      output.appendChild(city);
+      let temp = document.createElement("p");
+      temp.innerHTML = `Temperature: ${data.main.temp - 273.15}°C`;
+      output.appendChild(temp);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
