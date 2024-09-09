@@ -1371,33 +1371,37 @@
 //   quote.innerHTML = texts[random];
 // });
 
-let inpu = document.getElementById("inp");
-let btn = document.getElementById("btn");
-let output = document.getElementById("output");
-btn.addEventListener("click", function () {
-  getweather();
-  inpu.value = "";
-});
-function getweather() {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${inpu.value}&appid=aab01c15c2c40b906f4c1af2961dd801`
-  )
-    .then((res, rej) => {
-      if (!res.ok) {
-        throw new Error("jkdsha");
-      }
-      return res.json();
-    })
-    .then((data) => {
-      output.innerHTML = "";
-      let city = document.createElement("h5");
-      city.innerHTML = data.name;
-      output.appendChild(city);
-      let temp = document.createElement("p");
-      temp.innerHTML = `Temperature: ${data.main.temp - 273.15}°C`;
-      output.appendChild(temp);
-    })
-    .catch((err) => {
-      output.innerHTML = "erroe haw aaaw";
-    });
-}
+// let inpu = document.getElementById("inp");
+// let btn = document.getElementById("btn");
+// let output = document.getElementById("output");
+// btn.addEventListener("click", function () {
+//   getweather();
+//   inpu.value = "";
+// });
+// function getweather() {
+//   fetch(
+//     `https://api.openweathermap.org/data/2.5/weather?q=${inpu.value}&appid=aab01c15c2c40b906f4c1af2961dd801`
+//   )
+//     .then((res, rej) => {
+//       if (!res.ok) {
+//         throw new Error("jkdsha");
+//       }
+//       return res.json();
+//     })
+//     .then((data) => {
+//       output.innerHTML = "";
+//       let city = document.createElement("h5");
+//       city.innerHTML = data.name;
+//       output.appendChild(city);
+//       let temp = document.createElement("p");
+//       temp.innerHTML = `Temperature: ${data.main.temp - 273.15}°C`;
+//       output.appendChild(temp);
+//     })
+//     .catch((err) => {
+//       output.innerHTML = "erroe haw aaaw";
+//     });
+// }
+
+let str = " i want to be the best web developer in the world";
+let res = str.split(" ").reverse().join(" ");
+console.log(res);
