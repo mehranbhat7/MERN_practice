@@ -1422,7 +1422,11 @@
 // console.log(srt);
 // console.log(str);
 
-let str = "hii i am mehran ";
-
-let res = str.slice(4, -1);
-console.log(res);
+function trauncate(val, max) {
+  if (val.length > max) {
+    return val.slice(0, max) + "...";
+  } else {
+    return val;
+  }
+}
+console.log(trauncate("hello", 2));
