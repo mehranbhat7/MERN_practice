@@ -1431,11 +1431,8 @@
 // }
 // console.log(trauncate("hello", 2));
 
-let num = 1081;
-let str = num.toString().split("").reverse().join("");
-console.log(str);
-if (num == str) {
-  console.log(true);
-} else {
-  console.log(false);
+function inp(val) {
+  let str = val.toString();
+  return val == str.split("").reverse().join("");
 }
+console.log(inp(101));
