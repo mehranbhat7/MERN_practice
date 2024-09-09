@@ -1417,27 +1417,27 @@
 // let res = first.slice(0, i);
 // console.log(res === "" ? -1 : res);
 
-function inup(roman) {
-  const romanNumbers = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
-  let total = 0;
-  for (let i = 0; i < roman.length; i++) {
-    let current = romanNumbers[roman[i]];
-    let next = romanNumbers[roman[i + 1]];
+const val = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
+};
+let M = 1000;
+let total = 0;
+let roman = "XXIV";
 
-    if (current < next) {
-      total -= current;
-    } else {
-      total += current;
-    }
+for (let i = 0; i < roman.length; i++) {
+  let curr = val[roman[i]];
+  let next = val[roman[i + 1]];
+
+  if (curr < next) {
+    total -= curr;
+  } else {
+    total += curr;
   }
-  return total;
 }
-console.log(inup("XXIVIV"));
+console.log(total);
