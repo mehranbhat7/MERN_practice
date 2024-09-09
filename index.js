@@ -1417,7 +1417,12 @@
 // let res = first.slice(0, i);
 // console.log(res === "" ? -1 : res);
 
-let srt = " my name is mehran muzaffar bhat";
-let str = srt.replaceAll("m", "z");
-console.log(srt);
-console.log(str);
+// let srt = " my name is mehran muzaffar bhat";
+// let str = srt.replaceAll("m", "z");
+// console.log(srt);
+// console.log(str);
+
+let str = "hii i am mehran ";
+
+let res = str.slice(4, -1);
+console.log(res);
