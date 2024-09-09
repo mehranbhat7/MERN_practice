@@ -1417,7 +1417,7 @@
 // let res = first.slice(0, i);
 // console.log(res === "" ? -1 : res);
 
-const val = {
+const romanHash = {
   I: 1,
   V: 5,
   X: 10,
@@ -1426,18 +1426,33 @@ const val = {
   D: 500,
   M: 1000,
 };
-let M = 1000;
-let total = 0;
-let roman = "XXIV";
-
-for (let i = 0; i < roman.length; i++) {
-  let curr = val[roman[i]];
-  let next = val[roman[i + 1]];
-
-  if (curr < next) {
-    total -= curr;
-  } else {
-    total += curr;
+const s = "MCMLXXXIX";
+// s = 1989
+function romanToInt(s) {
+  let accumulator = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "I" && s[i + 1] === "V") {
+      accumulator += 4;
+      i++;
+    } else if (s[i] === "I" && s[i + 1] === "X") {
+      accumulator += 9;
+      i++;
+    } else if (s[i] === "X" && s[i + 1] === "L") {
+      accumulator += 40;
+      i++;
+    } else if (s[i] === "X" && s[i + 1] === "C") {
+      accumulator += 90;
+      i++;
+    } else if (s[i] === "C" && s[i + 1] === "D") {
+      accumulator += 400;
+      i++;
+    } else if (s[i] === "C" && s[i + 1] === "M") {
+      accumulator += 900;
+      i++;
+    } else {
+      accumulator += romanHash[s[i]];
+    }
   }
+  return accumulator;
 }
-console.log(total);
+console.log(romanToInt("XXX"));
