@@ -1422,11 +1422,20 @@
 // console.log(srt);
 // console.log(str);
 
-function trauncate(val, max) {
-  if (val.length > max) {
-    return val.slice(0, max) + "...";
-  } else {
-    return val;
-  }
+// function trauncate(val, max) {
+//   if (val.length > max) {
+//     return val.slice(0, max) + "...";
+//   } else {
+//     return val;
+//   }
+// }
+// console.log(trauncate("hello", 2));
+
+let num = 1081;
+let str = num.toString().split("").reverse().join("");
+console.log(str);
+if (num == str) {
+  console.log(true);
+} else {
+  console.log(false);
 }
-console.log(trauncate("hello", 2));
