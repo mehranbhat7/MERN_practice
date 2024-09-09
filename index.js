@@ -1406,13 +1406,38 @@
 // let res = str.split(" ").reverse().join(" ");
 // console.log(res);
 
-let str = ["ulue", "tluetooth", "glund", "dluotion", "alulick", "black"];
-str.sort();
-let i = 0;
-let first = str[0];
-let last = str[str.length - 1];
-while (i < first.length && i < last.length && first[i] === last[i]) {
-  i++;
+// let str = ["ulue", "tluetooth", "glund", "dluotion", "alulick", "black"];
+// str.sort();
+// let i = 0;
+// let first = str[0];
+// let last = str[str.length - 1];
+// while (i < first.length && i < last.length && first[i] === last[i]) {
+//   i++;
+// }
+// let res = first.slice(0, i);
+// console.log(res === "" ? -1 : res);
+
+function inup(roman) {
+  const romanNumbers = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  let total = 0;
+  for (let i = 0; i < roman.length; i++) {
+    let current = romanNumbers[roman[i]];
+    let next = romanNumbers[roman[i + 1]];
+
+    if (current < next) {
+      total -= current;
+    } else {
+      total += current;
+    }
+  }
+  return total;
 }
-let res = first.slice(0, i);
-console.log(res === "" ? -1 : res);
+console.log(inup("XXIVIV"));
