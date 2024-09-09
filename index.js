@@ -1402,6 +1402,17 @@
 //     });
 // }
 
-let str = " i want to be the best web developer in the world";
-let res = str.split(" ").reverse().join(" ");
-console.log(res);
+// let str = " i want to be the best web developer in the world";
+// let res = str.split(" ").reverse().join(" ");
+// console.log(res);
+
+let str = ["ulue", "tluetooth", "glund", "dluotion", "alulick", "black"];
+str.sort();
+let i = 0;
+let first = str[0];
+let last = str[str.length - 1];
+while (i < first.length && i < last.length && first[i] === last[i]) {
+  i++;
+}
+let res = first.slice(0, i);
+console.log(res === "" ? -1 : res);
