@@ -1474,11 +1474,6 @@
 // }
 // console.log(ham("mehran", "zubair"));
 
-let str1 = "mammmbmmc";
-let str2 = "ammcmbmmm";
-let str11 = str1.split("").sort().join("");
-let str22 = str2.split("").sort().join("");
-console.log(str11);
-console.log(str22);
-console.log(str11 === str22);
-console.log(str1 === str2);
+let str1 = "my namae is mehran";
+let mod = str1.replaceAll("a", "ze");
+console.log(mod);
