@@ -1474,15 +1474,6 @@
 // }
 // console.log(ham("mehran", "zubair"));
 
-function anagarm(x, y) {
-  let val1 = x.split("").sort().join("");
-  let val2 = y.split("").sort().join("");
-  console.log(val1);
-  console.log(val2);
-  if (val1 === val2) {
-    return true;
-  } else {
-    return false;
-  }
-}
-console.log(anagarm("pad", "das"));
+let str1 = " mehran";
+let str2 = " muzaffar";
+console.log(str1.concat(str2));
