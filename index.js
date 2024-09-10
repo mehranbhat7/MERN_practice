@@ -1459,3 +1459,17 @@
 // let str = "racecare";
 // let num = str.split("").reverse().join("");
 // console.log(str === num);
+
+function ham(x, y) {
+  if (x.length != y.length) {
+    throw new Error("Error ha bayyii");
+  }
+  let count = 0;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === y[i]) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(ham("mehran", "zubair"));
