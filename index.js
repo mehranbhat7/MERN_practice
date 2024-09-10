@@ -1431,8 +1431,31 @@
 // }
 // console.log(trauncate("hello", 2));
 
-function inp(val) {
-  let str = val.toString();
-  return val == str.split("").reverse().join("");
-}
-console.log(inp(101));
+// let str = "hello world";
+// let res = str.split(" ").reverse().join(" ");
+// console.log(res);
+
+// let arr = ["club", "aluster", "clutch", "cluonline", "clue"];
+// arr.sort();
+// let i = 0;
+
+// let first = arr[0];
+// let last = arr[arr.length - 1];
+// while (i < first.length && i < last.length && first[i] === last[i]) {
+//   i++;
+// }
+// let res = first.slice(0, i);
+// console.log(res === "" ? -1 : res);
+
+// function name(name, max) {
+//   if (name.length > max) {
+//     return name.slice(0, max) + "...";
+//   } else {
+//     return name;
+//   }
+// }
+// console.log(name("mehran muzaffar bhat", 30));
+
+// let str = "racecare";
+// let num = str.split("").reverse().join("");
+// console.log(str === num);
