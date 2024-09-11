@@ -1503,13 +1503,14 @@
 // console.log(name("rmarr"));
 
 function name(x, y) {
-  let z = y.split("").reverse().join("");
-  if (x === z) {
+  let a = x.split("").sort().join("");
+  console.log(a);
+  let b = y.split("").sort().join("");
+  console.log(b);
+  if (a === b) {
     return true;
-  } else if (x.length != z.length) {
-    return "not equal ";
   } else {
     return false;
   }
 }
-console.log(name("cocol", "looc"));
+console.log(name("listen", "silent"));
