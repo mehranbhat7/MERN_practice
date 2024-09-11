@@ -1483,11 +1483,21 @@
 // }
 // console.log(name("my name is mehran"));
 
-function name(val, max) {
-  if (val.length > max) {
-    return val.slice(0, max) + "...";
+// function name(val, max) {
+//   if (val.length > max) {
+//     return val.slice(0, max) + "...";
+//   } else {
+//     return val;
+//   }
+// }
+// console.log(name(" mehran muzaffar bhat ", 3));
+
+function name(val) {
+  let res = val.split("").reverse().join("");
+  if (res === val) {
+    return true;
   } else {
-    return val;
+    return false;
   }
 }
-console.log(name(" mehran muzaffar bhat ", 3));
+console.log(name("rmarr"));
