@@ -1474,6 +1474,11 @@
 // }
 // console.log(ham("mehran", "zubair"));
 
-let str1 = "my namae is mehran";
-let mod = str1.replaceAll("a", "ze");
-console.log(mod);
+// let str1 = "my namae is mehran";
+// let mod = str1.replaceAll("a", "ze");
+// console.log(mod);
+
+function name(val) {
+  return val.split(" ").reverse().join(" ");
+}
+console.log(name("my name is mehran"));
