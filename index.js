@@ -1492,12 +1492,24 @@
 // }
 // console.log(name(" mehran muzaffar bhat ", 3));
 
-function name(val) {
-  let res = val.split("").reverse().join("");
-  if (res === val) {
+// function name(val) {
+//   let res = val.split("").reverse().join("");
+//   if (res === val) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(name("rmarr"));
+
+function name(x, y) {
+  let z = y.split("").reverse().join("");
+  if (x === z) {
     return true;
+  } else if (x.length != z.length) {
+    return "not equal ";
   } else {
     return false;
   }
 }
-console.log(name("rmarr"));
+console.log(name("cocol", "looc"));
