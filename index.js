@@ -1503,14 +1503,9 @@
 // console.log(name("rmarr"));
 
 function name(x, y) {
-  let a = x.split("").sort().join("");
-  console.log(a);
-  let b = y.split("").sort().join("");
-  console.log(b);
-  if (a === b) {
-    return true;
-  } else {
-    return false;
-  }
+  let a = x.concat(y);
+  let b = a.sort();
+
+  return a;
 }
-console.log(name("listen", "silent"));
+console.log(name([1, 3, 5], [2, 4, 9]));
