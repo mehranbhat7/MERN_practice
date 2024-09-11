@@ -1478,7 +1478,17 @@
 // let mod = str1.replaceAll("a", "ze");
 // console.log(mod);
 
-function name(val) {
-  return val.split(" ").reverse().join(" ");
+// function name(val) {
+//   return val.split(" ").reverse().join(" ");
+// }
+// console.log(name("my name is mehran"));
+
+let arr = ["club", "cluster", "clutch", "cluonline", "clue"];
+let first = arr[0];
+let last = arr[arr.length - 1];
+let i = 0;
+while (i < first.length && i < last.length && first[i] === last[i]) {
+  i++;
 }
-console.log(name("my name is mehran"));
+let res = first.slice(0, i);
+console.log(res);
