@@ -1483,12 +1483,11 @@
 // }
 // console.log(name("my name is mehran"));
 
-let arr = ["club", "cluster", "clutch", "cluonline", "clue"];
-let first = arr[0];
-let last = arr[arr.length - 1];
-let i = 0;
-while (i < first.length && i < last.length && first[i] === last[i]) {
-  i++;
+function name(val, max) {
+  if (val.length > max) {
+    return val.slice(0, max) + "...";
+  } else {
+    return val;
+  }
 }
-let res = first.slice(0, i);
-console.log(res);
+console.log(name(" mehran muzaffar bhat ", 3));
