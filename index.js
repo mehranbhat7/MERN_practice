@@ -1502,10 +1502,17 @@
 // }
 // console.log(name("rmarr"));
 
-function name(x, y) {
-  let a = x.concat(y);
-  let b = a.sort();
+// function name(x, y) {
+//   let a = x.concat(y);
+//   let b = a.sort();
 
-  return a;
+//   return a;
+// }
+// console.log(name([1, 3, 5], [2, 4, 9]));
+
+function handleClick(event) {
+  event.stopPropagation();
+  event.preventDefault();
+  let name = document.getElementById("name").value;
+  console.log(name);
 }
-console.log(name([1, 3, 5], [2, 4, 9]));

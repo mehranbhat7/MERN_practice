@@ -98,12 +98,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    .done {
-      text-decoration: line-through;
-      text-decoration-color: rgb(44, 109, 165);
-    }
-  </style>
+
   <body>
     <!-- KEY LOGGER PROJECT BOIUZ LETS GOOOOOOOOOOOOOOOOOOOOOOOOOO -->
     <!-- //
@@ -216,14 +211,14 @@
         <p id="guesses">No. of Guesses : 0</p>
       </div>
     </div> -->
-    <div>
-      <div>
-        <h1>Todays Weather</h1>
-        <input type="text" name="" id="inp" />
-        <button id="btn">check</button>
-      </div>
-      <div id="output"></div>
-    </div>
+    <form>
+      <label>Name:</label>
+      <input type="text" name="name" id="name" /><br />
+      <label>Rollno:</label>
+      <input type="number" name="roll" id="roll" />
+      <button onClick="handleClick(event)">Submit</button>
+    </form>
+    <div id="root"></div>
     <script src="index.js"></script>
   </body>
 </html>
