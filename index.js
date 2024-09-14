@@ -1514,5 +1514,10 @@ function handleClick(event) {
   event.stopPropagation();
   event.preventDefault();
   let name = document.getElementById("name").value;
-  console.log(name);
+  let roll = document.getElementById("roll").value;
+  let root = document.getElementById("root");
+
+  let res = document.createElement("div");
+  res.innerHTML = `<h1>Name: ${name}</h1><h1>Roll: ${roll}</h1>`;
+  root.appendChild(res);
 }
