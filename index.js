@@ -1509,14 +1509,17 @@
 //   return a;
 // }
 // console.log(name([1, 3, 5], [2, 4, 9]));
-
+let arr = [];
 function handleClick(event) {
   event.stopPropagation();
   event.preventDefault();
   let name = document.getElementById("name").value;
   let roll = document.getElementById("roll").value;
   let root = document.getElementById("root");
-
+  let student = {
+    name: name,
+    roll: roll,
+  };
   let res = document.createElement("div");
   res.innerHTML = `<h1>Name: ${name}</h1><h1>Roll: ${roll}</h1>`;
   root.appendChild(res);
