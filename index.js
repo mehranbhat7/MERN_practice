@@ -1520,6 +1520,8 @@ function handleClick(event) {
     name: name,
     roll: roll,
   };
+  arr.push(student);
+  let unique = [...new Set(student.roll)];
   let res = document.createElement("div");
   res.innerHTML = `<h1>Name: ${name}</h1><h1>Roll: ${roll}</h1>`;
   root.appendChild(res);
