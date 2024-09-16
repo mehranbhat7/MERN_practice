@@ -1585,3 +1585,10 @@ function handleClick(event) {
 //
 //
 //
+let inpp = document.getElementById("inp");
+let btnn = document.getElementById("btn");
+let list = document.getElementById("list");
+btnn.addEventListener("click", function (e) {
+  e.preventDefault();
+  addtask();
+});
