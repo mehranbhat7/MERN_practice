@@ -1591,4 +1591,10 @@ let list = document.getElementById("list");
 btnn.addEventListener("click", function (e) {
   e.preventDefault();
   addtask();
+  inpp.value = "";
 });
+function addtask() {
+  let newele = document.createElement("li");
+  newele.innerHTML = inpp.value;
+  list.append(newele);
+}
