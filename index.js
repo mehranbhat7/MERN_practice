@@ -1593,6 +1593,7 @@ btnn.addEventListener("click", function (e) {
   addtask();
   inpp.value = "";
 });
+
 function addtask() {
   let newele = document.createElement("li");
   newele.innerHTML = inpp.value;
