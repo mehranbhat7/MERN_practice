@@ -1509,6 +1509,33 @@
 //   return a;
 // }
 // console.log(name([1, 3, 5], [2, 4, 9]));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 let arr = [];
 function handleClick(event) {
   event.stopPropagation();
@@ -1534,3 +1561,27 @@ function handleClick(event) {
   res.innerHTML = `<h1>Name: ${name}</h1><h1>Roll: ${roll}</h1>`;
   root.appendChild(res);
 }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
