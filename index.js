@@ -1635,7 +1635,11 @@
 //   });
 // }
 
-function name(val) {
-  return val.split(" ").reverse().join(" ");
+let arr = ["geeksforgeeks", "geeks", "geek", "geezer"];
+let first = arr[0];
+let last = arr[arr.length - 1];
+let i = 0;
+while (i < first.length && i < last.length && first[i] === last[i]) {
+  i++;
 }
-console.log(name("i love programming very much"));
+console.log(first.slice(0, i));
