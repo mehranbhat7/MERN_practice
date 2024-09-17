@@ -1635,11 +1635,23 @@
 //   });
 // }
 
-let arr = ["geeksforgeeks", "geeks", "geek", "geezer"];
-let first = arr[0];
-let last = arr[arr.length - 1];
-let i = 0;
-while (i < first.length && i < last.length && first[i] === last[i]) {
-  i++;
-}
-console.log(first.slice(0, i));
+// let arr = ["geeksforgeeks", "geeks", "geek", "geezer"];
+// let first = arr[0];
+// let last = arr[arr.length - 1];
+// let i = 0;
+// while (i < first.length && i < last.length && first[i] === last[i]) {
+//   i++;
+// }
+// console.log(first.slice(0, i));
+
+localStorage.setItem("name", "Mehran");
+let obj = {
+  name: "Muzaffar",
+  age: 25,
+  address: "aalikadal",
+  email: "mehranbhat@gmail.com",
+};
+localStorage.setItem("info", obj);
+
+let x = localStorage.getItem("name");
+console.log(x);
