@@ -1600,7 +1600,7 @@ function addtask() {
   };
   for (let i = 0; i < arry.length; i++) {
     let current = arry[i];
-    if (current === inpp.value) {
+    if (current.inpuut === inpp.value) {
       return alert("already exists");
     }
   }
