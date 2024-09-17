@@ -1651,7 +1651,10 @@ let obj = {
   address: "aalikadal",
   email: "mehranbhat@gmail.com",
 };
-localStorage.setItem("info", obj);
+localStorage.setItem("info", JSON.stringify(obj));
 
-let x = localStorage.getItem("name");
+let arr = ["abc", "def", "ghi", "jkl"];
+
+localStorage.setItem("array", JSON.stringify(arr));
+const x = JSON.parse(localStorage.getItem("info"));
 console.log(x);
