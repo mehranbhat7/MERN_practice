@@ -1604,8 +1604,21 @@ function addtask() {
       return alert("already exists");
     }
   }
+
   arry.push(data);
   let newele = document.createElement("li");
+  let del = document.createElement("button");
   newele.innerHTML = inpp.value;
+  del.innerHTML = "Delete";
   list.append(newele);
+  newele.append(del);
+
+  del.addEventListener("click", function () {
+    list.removeChild(newele);
+    arry.forEach((ele, ind) => {
+      if (ele.value === data.value) {
+        arry.splice(ind, 1);
+      }
+    });
+  });
 }
