@@ -1536,31 +1536,31 @@
 //
 //
 
-let arr = [];
-function handleClick(event) {
-  event.stopPropagation();
-  event.preventDefault();
-  let name = document.getElementById("name").value;
-  let roll = document.getElementById("roll").value;
-  let root = document.getElementById("root");
-  let student = {
-    name: name,
-    roll: roll,
-  };
+// let arr = [];
+// function handleClick(event) {
+//   event.stopPropagation();
+//   event.preventDefault();
+//   let name = document.getElementById("name").value;
+//   let roll = document.getElementById("roll").value;
+//   let root = document.getElementById("root");
+//   let student = {
+//     name: name,
+//     roll: roll,
+//   };
 
-  for (let i = 0; i < arr.length; i++) {
-    const stu = arr[i];
-    if (stu.roll == student.roll) {
-      alert("Roll number already exists");
-      return;
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     const stu = arr[i];
+//     if (stu.roll == student.roll) {
+//       alert("Roll number already exists");
+//       return;
+//     }
+//   }
 
-  arr.push(student);
-  let res = document.createElement("div");
-  res.innerHTML = `<h1>Name: ${name}</h1><h1>Roll: ${roll}</h1>`;
-  root.appendChild(res);
-}
+//   arr.push(student);
+//   let res = document.createElement("div");
+//   res.innerHTML = `<h1>Name: ${name}</h1><h1>Roll: ${roll}</h1>`;
+//   root.appendChild(res);
+// }
 //
 //
 //
@@ -1588,13 +1588,23 @@ function handleClick(event) {
 let inpp = document.getElementById("inp");
 let btnn = document.getElementById("btn");
 let list = document.getElementById("list");
+let arry = [];
 btnn.addEventListener("click", function (e) {
   e.preventDefault();
   addtask();
   inpp.value = "";
 });
-
 function addtask() {
+  let data = {
+    inpuut: inpp.value,
+  };
+  for (let i = 0; i < arry.length; i++) {
+    let current = arry[i];
+    if (current === inpp.value) {
+      return alert("already exists");
+    }
+  }
+  arry.push(data);
   let newele = document.createElement("li");
   newele.innerHTML = inpp.value;
   list.append(newele);
