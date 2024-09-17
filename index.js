@@ -1585,52 +1585,57 @@
 //
 //
 //
-let inpp = document.getElementById("inp");
-let btnn = document.getElementById("btn");
-let list = document.getElementById("list");
-let arry = [];
-btnn.addEventListener("click", function (e) {
-  e.preventDefault();
-  addtask();
-  inpp.value = "";
-});
-function addtask() {
-  let data = {
-    inpuut: inpp.value,
-  };
-  for (let i = 0; i < arry.length; i++) {
-    let current = arry[i];
-    if (current.inpuut === inpp.value) {
-      return alert("already exists");
-    }
-  }
+// let inpp = document.getElementById("inp");
+// let btnn = document.getElementById("btn");
+// let list = document.getElementById("list");
+// let arry = [];
+// btnn.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   addtask();
+//   inpp.value = "";
+// });
+// function addtask() {
+//   let data = {
+//     inpuut: inpp.value,
+//   };
+//   for (let i = 0; i < arry.length; i++) {
+//     let current = arry[i];
+//     if (current.inpuut === inpp.value) {
+//       return alert("already exists");
+//     }
+//   }
 
-  arry.push(data);
-  let newele = document.createElement("li");
-  let del = document.createElement("button");
-  let edit = document.createElement("button");
-  newele.innerHTML = inpp.value;
-  del.innerHTML = "Delete";
-  edit.innerHTML = "Edit";
-  list.append(newele);
-  newele.append(del);
-  newele.append(edit);
+//   arry.push(data);
+//   let newele = document.createElement("li");
+//   let del = document.createElement("button");
+//   let edit = document.createElement("button");
+//   newele.innerHTML = inpp.value;
+//   del.innerHTML = "Delete";
+//   edit.innerHTML = "Edit";
+//   list.append(newele);
+//   newele.append(del);
+//   newele.append(edit);
 
-  edit.addEventListener("click", function () {
-    let newval = prompt("Enter neew Value", inpp.value);
-    if (newval) {
-      newele.innerHTML = newval;
-    }
-  });
-  del.addEventListener("click", function () {
-    list.removeChild(newele);
-    arry.forEach((ele, ind) => {
-      if (ele.value === data.value) {
-        arry.splice(ind, 1);
-      }
-    });
-  });
-  newele.addEventListener("click", function () {
-    this.classList.toggle("toggle");
-  });
+//   edit.addEventListener("click", function () {
+//     let newval = prompt("Enter neew Value", inpp.value);
+//     if (newval) {
+//       newele.innerHTML = newval;
+//     }
+//   });
+//   del.addEventListener("click", function () {
+//     list.removeChild(newele);
+//     arry.forEach((ele, ind) => {
+//       if (ele.value === data.value) {
+//         arry.splice(ind, 1);
+//       }
+//     });
+//   });
+//   newele.addEventListener("click", function () {
+//     this.classList.toggle("toggle");
+//   });
+// }
+
+function name(val) {
+  return val.split(" ").reverse().join(" ");
 }
+console.log(name("i love programming very much"));
