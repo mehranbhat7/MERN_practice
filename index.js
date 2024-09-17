@@ -1608,11 +1608,20 @@ function addtask() {
   arry.push(data);
   let newele = document.createElement("li");
   let del = document.createElement("button");
+  let edit = document.createElement("button");
   newele.innerHTML = inpp.value;
   del.innerHTML = "Delete";
+  edit.innerHTML = "Edit";
   list.append(newele);
   newele.append(del);
+  newele.append(edit);
 
+  edit.addEventListener("click", function () {
+    let newval = prompt("Enter neew Value", inpp.value);
+    if (newval) {
+      newele.innerHTML = newval;
+    }
+  });
   del.addEventListener("click", function () {
     list.removeChild(newele);
     arry.forEach((ele, ind) => {

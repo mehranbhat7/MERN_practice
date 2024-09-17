@@ -107,6 +107,6 @@ a:active {
 }
 .toggle {
   text-decoration: line-through;
-  color: rgb(162, 156, 156);
-  font-weight: 700;
+  color: rgb(181, 85, 85);
+  font-weight: 600;
 }
