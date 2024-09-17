@@ -1621,4 +1621,7 @@ function addtask() {
       }
     });
   });
+  newele.addEventListener("click", function () {
+    this.classList.toggle("toggle");
+  });
 }
