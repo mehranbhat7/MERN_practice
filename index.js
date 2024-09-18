@@ -1644,17 +1644,28 @@
 // }
 // console.log(first.slice(0, i));
 
-localStorage.setItem("name", "Mehran");
-let obj = {
-  name: "Muzaffar",
-  age: 25,
-  address: "aalikadal",
-  email: "mehranbhat@gmail.com",
-};
-localStorage.setItem("info", JSON.stringify(obj));
+// localStorage.setItem("name", "Mehran");
+// let obj = {
+//   name: "Muzaffar",
+//   age: 25,
+//   address: "aalikadal",
+//   email: "mehranbhat@gmail.com",
+// };
+// localStorage.setItem("info", JSON.stringify(obj));
 
-let arr = ["abc", "def", "ghi", "jkl"];
+// let arr = ["abc", "def", "ghi", "jkl"];
 
-localStorage.setItem("array", JSON.stringify(arr));
-const x = JSON.parse(localStorage.getItem("info"));
-console.log(x);
+// localStorage.setItem("array", JSON.stringify(arr));
+// const x = JSON.parse(localStorage.getItem("info"));
+// console.log(x);
+
+function numb(val1) {
+  let x = val1;
+
+  if (x % 7 === 0) {
+    return "The first number is divisible by 7";
+  } else {
+    return "The first number is not divisible by 7";
+  }
+}
+console.log(numb(20));
