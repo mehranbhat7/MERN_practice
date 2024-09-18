@@ -1659,17 +1659,44 @@
 // const x = JSON.parse(localStorage.getItem("info"));
 // console.log(x);
 
-function numb(val1, val2, val3) {
+//22,89,90,5,45,32,15 // 5
+function test(a, b, c, d, e, f, g) {
   let result = "";
-  if (val1 % 7 === 0) {
-    result += "The first number is divisible by 7";
-  } else [(result += "The first number is not divisible by 7")];
-  if (val2 % 7 === 0) {
-    result += "\nThe second number is divisible by 7";
-  } else [(result += "\nThe second number is not divisible by 7")];
-  if (val3 % 7 === 0) {
-    result += "\nThe third number is divisible by 7";
-  } else [(result += "\nThe third number is not divisible by 7")];
+  if (a % 5 === 0) {
+    result += " 22 is divisible by 5";
+  } else {
+    result += " 22 is not divisible by 5 \n";
+  }
+  if (b % 5 === 0) {
+    result += ", 89 is divisible by 5";
+  } else {
+    result += ", 89 is not divisible by 5  \n";
+  }
+  if (c % 5 === 0) {
+    result += ", 90 is divisible by 5";
+  } else {
+    result += ", 90 is not divisible by 5  \n";
+  }
+  if (d % 5 === 0) {
+    result += ", 5 is divisible by 5";
+  } else {
+    result += ", 5 is not divisible by 5  \n";
+  }
+  if (e % 5 === 0) {
+    result += "45 is divisible by 5";
+  } else {
+    result += ", 45 is not divisible by 5  \n";
+  }
+  if (f % 5 === 0) {
+    result += ", 32 is divisible by 5";
+  } else {
+    result += ", 32 is not divisible by 5  \n";
+  }
+  if (g % 5 === 0) {
+    result += ", 15 is divisible by 5";
+  } else {
+    result += ", 15 is not divisible by 5  \n";
+  }
   return result;
 }
-console.log(numb(21, 30, 35));
+console.log(test(22, 89, 90, 5, 45, 32, 15));
