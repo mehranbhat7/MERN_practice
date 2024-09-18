@@ -1701,30 +1701,43 @@
 // }
 // console.log(test(22, 89, 90, 5, 45, 32, 15));
 
-function strs(str1, str2) {
-  if (str1.length != str2.length) {
-    return false;
-  }
-  let map1 = {};
-  let map2 = {};
-  for (let i = 0; i < str1.length; i++) {
-    let car1 = str1[i];
-    let car2 = str2[i];
-    if (map1[car1]) {
-      if (map1[car1] != car2) {
-        return false;
-      }
-    } else {
-      map1[car1] = car2;
-    }
-    if (map2[car2]) {
-      if (map2[car2] != car2) {
-        return false;
-      }
-    } else {
-      map1[car2] = car1;
-    }
-  }
-  return true;
-}
-console.log(strs("aasbbc", "xxyyyz"));
+// function strs(str1, str2) {
+//   if (str1.length != str2.length) {
+//     return false;
+//   }
+//   let map1 = {};
+//   let map2 = {};
+//   for (let i = 0; i < str1.length; i++) {
+//     let car1 = str1[i];
+//     let car2 = str2[i];
+//     if (map1[car1]) {
+//       if (map1[car1] != car2) {
+//         return false;
+//       }
+//     } else {
+//       map1[car1] = car2;
+//     }
+//     if (map2[car2]) {
+//       if (map2[car2] != car2) {
+//         return false;
+//       }
+//     } else {
+//       map1[car2] = car1;
+//     }
+//   }
+//   return true;
+// }
+// console.log(strs("aas bbc", "xxyyyz"));
+
+let user = function () {
+  console.log("hi i am user");
+};
+
+let greet = function (a) {
+  console.log("hello user");
+  user();
+  return function () {
+    console.log("jhdghjgjdfgjsdfjsdjf");
+  };
+};
+greet(user);
