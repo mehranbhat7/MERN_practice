@@ -1660,43 +1660,71 @@
 // console.log(x);
 
 //22,89,90,5,45,32,15 // 5
-function test(a, b, c, d, e, f, g) {
-  let result = "";
-  if (a % 5 === 0) {
-    result += " 22 is divisible by 5";
-  } else {
-    result += " 22 is not divisible by 5 \n";
+// function test(a, b, c, d, e, f, g) {
+//   let result = "";
+//   if (a % 5 === 0) {
+//     result += " 22 is divisible by 5";
+//   } else {
+//     result += " 22 is not divisible by 5 \n";
+//   }
+//   if (b % 5 === 0) {
+//     result += ", 89 is divisible by 5";
+//   } else {
+//     result += ", 89 is not divisible by 5  \n";
+//   }
+//   if (c % 5 === 0) {
+//     result += ", 90 is divisible by 5";
+//   } else {
+//     result += ", 90 is not divisible by 5  \n";
+//   }
+//   if (d % 5 === 0) {
+//     result += ", 5 is divisible by 5";
+//   } else {
+//     result += ", 5 is not divisible by 5  \n";
+//   }
+//   if (e % 5 === 0) {
+//     result += "45 is divisible by 5";
+//   } else {
+//     result += ", 45 is not divisible by 5  \n";
+//   }
+//   if (f % 5 === 0) {
+//     result += ", 32 is divisible by 5";
+//   } else {
+//     result += ", 32 is not divisible by 5  \n";
+//   }
+//   if (g % 5 === 0) {
+//     result += ", 15 is divisible by 5";
+//   } else {
+//     result += ", 15 is not divisible by 5  \n";
+//   }
+//   return result;
+// }
+// console.log(test(22, 89, 90, 5, 45, 32, 15));
+
+function strs(str1, str2) {
+  if (str1.length != str2.length) {
+    return false;
   }
-  if (b % 5 === 0) {
-    result += ", 89 is divisible by 5";
-  } else {
-    result += ", 89 is not divisible by 5  \n";
+  let map1 = {};
+  let map2 = {};
+  for (let i = 0; i < str1.length; i++) {
+    let car1 = str1[i];
+    let car2 = str2[i];
+    if (map1[car1]) {
+      if (map1[car1] != car2) {
+        return false;
+      }
+    } else {
+      map1[car1] = car2;
+    }
+    if (map2[car2]) {
+      if (map2[car2] != car2) {
+        return false;
+      }
+    } else {
+      map1[car2] = car1;
+    }
   }
-  if (c % 5 === 0) {
-    result += ", 90 is divisible by 5";
-  } else {
-    result += ", 90 is not divisible by 5  \n";
-  }
-  if (d % 5 === 0) {
-    result += ", 5 is divisible by 5";
-  } else {
-    result += ", 5 is not divisible by 5  \n";
-  }
-  if (e % 5 === 0) {
-    result += "45 is divisible by 5";
-  } else {
-    result += ", 45 is not divisible by 5  \n";
-  }
-  if (f % 5 === 0) {
-    result += ", 32 is divisible by 5";
-  } else {
-    result += ", 32 is not divisible by 5  \n";
-  }
-  if (g % 5 === 0) {
-    result += ", 15 is divisible by 5";
-  } else {
-    result += ", 15 is not divisible by 5  \n";
-  }
-  return result;
+  return true;
 }
-console.log(test(22, 89, 90, 5, 45, 32, 15));
+console.log(strs("aasbbc", "xxyyyz"));
