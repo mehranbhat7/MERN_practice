@@ -1729,15 +1729,9 @@
 // }
 // console.log(strs("aas bbc", "xxyyyz"));
 
-let user = function () {
-  console.log("hi i am user");
-};
-
-let greet = function (a) {
-  console.log("hello user");
-  user();
-  return function () {
-    console.log("jhdghjgjdfgjsdfjsdjf");
-  };
-};
-greet(user);
+//
+let arr = [23, 65, 23, 56, 78, 45];
+let res = arr.find((ele) => {
+  return ele > 50;
+});
+console.log(res);
