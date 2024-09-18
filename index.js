@@ -1659,13 +1659,17 @@
 // const x = JSON.parse(localStorage.getItem("info"));
 // console.log(x);
 
-function numb(val1) {
-  let x = val1;
-
-  if (x % 7 === 0) {
-    return "The first number is divisible by 7";
-  } else {
-    return "The first number is not divisible by 7";
-  }
+function numb(val1, val2, val3) {
+  let result = "";
+  if (val1 % 7 === 0) {
+    result += "The first number is divisible by 7";
+  } else [(result += "The first number is not divisible by 7")];
+  if (val2 % 7 === 0) {
+    result += "\nThe second number is divisible by 7";
+  } else [(result += "\nThe second number is not divisible by 7")];
+  if (val3 % 7 === 0) {
+    result += "\nThe third number is divisible by 7";
+  } else [(result += "\nThe third number is not divisible by 7")];
+  return result;
 }
-console.log(numb(20));
+console.log(numb(21, 30, 35));
