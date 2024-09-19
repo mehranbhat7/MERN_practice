@@ -1730,8 +1730,30 @@
 // console.log(strs("aas bbc", "xxyyyz"));
 
 //
-let arr = [23, 65, 23, 56, 78, 45];
-let res = arr.find((ele) => {
-  return ele > 50;
-});
-console.log(res);
+
+let inputt = document.getElementById("inp");
+let btn = document.getElementById("btn");
+let list = document.getElementById("list");
+btn.addEventListener("click", addTask);
+function addTask() {
+  let task = inputt.value;
+  if (task) {
+    createElement(task);
+  } else {
+    alert("enter the TASK");
+  }
+  inputt.value = "";
+  locall();
+}
+function createElement(task) {
+  let li = document.createElement("li");
+  li.innerHTML = task;
+  list.appendChild(li);
+}
+function locall() {
+  let tasks = [];
+  list.querySelectorAll("li").forEach((ele) => {
+    tasks.push(ele.innerText);
+  });
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
