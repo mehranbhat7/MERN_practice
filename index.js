@@ -1783,6 +1783,7 @@
 let input = document.getElementById("inp");
 let butn = document.getElementById("btn");
 let list = document.getElementById("list");
+let arr = [];
 reload();
 butn.addEventListener("click", addTask);
 
@@ -1792,6 +1793,10 @@ function addTask() {
     createelement(task);
   } else {
     alert("Please Enter the Task");
+  }
+  if (arr.includes(task)) {
+    alert("Task already exists");
+    return;
   }
   input.value = "";
   saveToLocal();
@@ -1803,10 +1808,15 @@ function createelement(task) {
   del.innerHTML = "Delete";
   list.appendChild(li);
   li.appendChild(del);
+  li.addEventListener("click", function () {
+    this.classList.toggle("toggle");
+  });
+
   del.addEventListener("click", function () {
     list.removeChild(li);
     saveToLocal();
   });
+  arr.push(task);
 }
 
 function saveToLocal() {
