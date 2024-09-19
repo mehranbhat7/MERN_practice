@@ -1731,23 +1731,72 @@
 
 //
 
-let inputt = document.getElementById("inp");
-let btn = document.getElementById("btn");
+// let inputt = document.getElementById("inp");
+// let btn = document.getElementById("btn");
+// let list = document.getElementById("list");
+// let tasks = [];
+// btn.addEventListener("click", addTask);
+// load();
+// function addTask() {
+//   let task = inputt.value;
+//   if (task) {
+//     createElement(task);
+//   } else {
+//     alert("enter the TASK");
+//   }
+//   inputt.value = "";
+//   locall();
+// }
+// function createElement(task) {
+//   let li = document.createElement("li");
+//   let del = document.createElement("button");
+//   li.innerHTML = task;
+//   del.innerHTML = "Delete";
+//   list.appendChild(li);
+//   li.appendChild(del);
+//   del.addEventListener("click", function () {
+//     list.removeChild(li);
+//     locall();
+//   });
+// }
+// function locall() {
+//   let tasks = [];
+//   list.querySelectorAll("li").forEach((ele) => {
+//     tasks.push(ele.innerText.replace("Delete", ""));
+//   });
+//   localStorage.setItem("tasks", JSON.stringify(tasks));
+// }
+
+// function load() {
+//   let tasks = JSON.parse(localStorage.getItem("tasks"));
+//   tasks.forEach(createElement);
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+let input = document.getElementById("inp");
+let butn = document.getElementById("btn");
 let list = document.getElementById("list");
-let tasks = [];
-btn.addEventListener("click", addTask);
-load();
+reload();
+butn.addEventListener("click", addTask);
+
 function addTask() {
-  let task = inputt.value;
+  let task = input.value;
   if (task) {
-    createElement(task);
+    createelement(task);
   } else {
-    alert("enter the TASK");
+    alert("Please Enter the Task");
   }
-  inputt.value = "";
-  locall();
+  input.value = "";
+  saveToLocal();
 }
-function createElement(task) {
+function createelement(task) {
   let li = document.createElement("li");
   let del = document.createElement("button");
   li.innerHTML = task;
@@ -1756,18 +1805,18 @@ function createElement(task) {
   li.appendChild(del);
   del.addEventListener("click", function () {
     list.removeChild(li);
-    locall();
+    saveToLocal();
   });
-}
-function locall() {
-  let tasks = [];
-  list.querySelectorAll("li").forEach((ele) => {
-    tasks.push(ele.innerText.replace("Delete", ""));
-  });
-  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-function load() {
-  let tasks = JSON.parse(localStorage.getItem("tasks"));
-  tasks.forEach(createElement);
+function saveToLocal() {
+  let arr = [];
+  list.querySelectorAll("li").forEach((ele) => {
+    arr.push(ele.innerText.replace("Delete", ""));
+  });
+  localStorage.setItem("todo-data", JSON.stringify(arr));
+}
+function reload() {
+  let task = JSON.parse(localStorage.getItem("todo-data"));
+  task.forEach(createelement);
 }
