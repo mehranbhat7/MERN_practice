@@ -1734,6 +1734,7 @@
 let inputt = document.getElementById("inp");
 let btn = document.getElementById("btn");
 let list = document.getElementById("list");
+let tasks = [];
 btn.addEventListener("click", addTask);
 load();
 function addTask() {
