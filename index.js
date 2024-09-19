@@ -1735,6 +1735,7 @@ let inputt = document.getElementById("inp");
 let btn = document.getElementById("btn");
 let list = document.getElementById("list");
 btn.addEventListener("click", addTask);
+load();
 function addTask() {
   let task = inputt.value;
   if (task) {
@@ -1747,13 +1748,25 @@ function addTask() {
 }
 function createElement(task) {
   let li = document.createElement("li");
+  let del = document.createElement("button");
   li.innerHTML = task;
+  del.innerHTML = "Delete";
   list.appendChild(li);
+  li.appendChild(del);
+  del.addEventListener("click", function () {
+    list.removeChild(li);
+    locall();
+  });
 }
 function locall() {
   let tasks = [];
   list.querySelectorAll("li").forEach((ele) => {
-    tasks.push(ele.innerText);
+    tasks.push(ele.innerText.replace("Delete", ""));
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function load() {
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+  tasks.forEach(createElement);
 }
