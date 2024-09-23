@@ -1822,9 +1822,8 @@
 //   load.forEach(createlist);
 // }
 
-let arr = ["mehran", "muzaffar", "male", 23, "kashmir", "haha"];
-
-let arr2 = [...arr];
-arr.push("pushed");
-console.log(arr);
-console.log(arr2);
+function sum(x, y, ...rest) {
+  console.log(x + y + rest);
+}
+sum(10, 5);
+sum(70, 5, 8);
