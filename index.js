@@ -1822,52 +1822,62 @@
 //   load.forEach(createlist);
 // }
 
-function one(callback) {
-  setTimeout(() => {
-    console.log("One");
-    callback();
-  }, 3000);
-}
-function two(call) {
-  console.log("Two");
-  call();
-}
-function three(call) {
-  console.log("Three");
-  call();
-}
-function four(cal) {
-  setTimeout(() => {
-    console.log("Four");
-    cal();
-  }, 6000);
-}
-function five(cab) {
-  setTimeout(() => {
-    console.log("Five");
-    cab();
-  }, 4000);
-}
-function six(cc) {
-  console.log("Six");
-  cc();
-}
-function seven(cc) {
-  console.log("Seven");
-  cc();
-}
-one(() => {
-  two(() => {
-    three(() => {
-      four(() => {
-        five(() => {
-          six(() => {
-            seven(() => {
-              console.log("All done");
-            });
-          });
-        });
-      });
-    });
+function one() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("One");
+      res();
+    }, 3000);
   });
-});
+}
+function two() {
+  return new Promise((res, rej) => {
+    console.log("Two");
+    res();
+  });
+}
+function three() {
+  return new Promise((res, rej) => {
+    console.log("Three");
+    res();
+  });
+}
+function four() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log("Four");
+      res();
+    }, 6000);
+  });
+}
+function five() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      rej("REJECTED AT FIVE");
+    }, 4000);
+  });
+}
+function six() {
+  return new Promise((res, rej) => {
+    console.log("Six");
+
+    res();
+  });
+}
+function seven() {
+  return new Promise((res, rej) => {
+    console.log("Seven");
+    res();
+  });
+}
+
+one()
+  .then(two)
+  .then(three)
+  .then(four)
+  .then(() => five().catch((err) => console.log(err)))
+  .then(six)
+  .then(seven)
+  .catch((err) => {
+    console.log(err);
+  });
