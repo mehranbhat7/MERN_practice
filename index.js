@@ -1822,62 +1822,41 @@
 //   load.forEach(createlist);
 // }
 
-function one() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      console.log("One");
-      res();
-    }, 3000);
+let input = document.getElementById("inp");
+let btn = document.getElementById("btn");
+let list = document.getElementById("list");
+btn.addEventListener("click", addList);
+load();
+function addList() {
+  let task = input.value;
+  if (task) {
+    createelement(task);
+  } else {
+    alert("Please enter a task");
+  }
+  input.value = "";
+  saveLocal();
+}
+function createelement(task) {
+  let li = document.createElement("li");
+  let del = document.createElement("button");
+  li.innerHTML = task;
+  del.innerHTML = "Delete";
+  list.appendChild(li);
+  li.appendChild(del);
+  del.addEventListener("click", function () {
+    list.removeChild(li);
+    saveLocal();
   });
 }
-function two() {
-  return new Promise((res, rej) => {
-    console.log("Two");
-    res();
+function saveLocal() {
+  let arr = [];
+  list.querySelectorAll("li").forEach((ele) => {
+    arr.push(ele.innerHTML.replace("Delete", ""));
   });
+  localStorage.setItem("tasks", JSON.stringify(arr));
 }
-function three() {
-  return new Promise((res, rej) => {
-    console.log("Three");
-    res();
-  });
+function load() {
+  let load = JSON.parse(localStorage.getItem("tasks"));
+  load.forEach(createelement);
 }
-function four() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      console.log("Four");
-      res();
-    }, 6000);
-  });
-}
-function five() {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      rej("REJECTED AT FIVE");
-    }, 4000);
-  });
-}
-function six() {
-  return new Promise((res, rej) => {
-    console.log("Six");
-
-    res();
-  });
-}
-function seven() {
-  return new Promise((res, rej) => {
-    console.log("Seven");
-    res();
-  });
-}
-
-one()
-  .then(two)
-  .then(three)
-  .then(four)
-  .then(() => five().catch((err) => console.log(err)))
-  .then(six)
-  .then(seven)
-  .catch((err) => {
-    console.log(err);
-  });
