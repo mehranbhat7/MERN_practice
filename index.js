@@ -1822,8 +1822,15 @@
 //   load.forEach(createlist);
 // }
 
-function sum(x, y, ...rest) {
-  console.log(x + y + rest);
-}
-sum(10, 5);
-sum(70, 5, 8);
+let arr = ["mehran", "muzaffrar", "mb@gmail.com"];
+let [firstName, lastName, email] = arr;
+console.log(lastName);
+
+let obj = {
+  name: "Muzaffar",
+  age: 25,
+  address: "aalikadal",
+  emaila: "mehranbhat@gmail.com",
+};
+let { name, age, address, emaila } = obj;
+console.log(name);
