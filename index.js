@@ -1822,15 +1822,38 @@
 //   load.forEach(createlist);
 // }
 
-let arr = ["mehran", "muzaffrar", "mb@gmail.com"];
-let [firstName, lastName, email] = arr;
-console.log(lastName);
+function one(callback) {
+  setTimeout(() => {
+    console.log("One");
+    callback();
+  }, 3000);
+}
+function two() {
+  console.log("Two");
+}
+function three() {
+  console.log("Three");
+}
+function four() {
+  setTimeout(() => {
+    console.log("Four");
+  }, 6000);
+}
+function five() {
+  setTimeout(() => {
+    console.log("Five");
+  }, 4000);
+}
+function six() {
+  console.log("Six");
+}
+function seven() {
+  console.log("Seven");
+}
+one(two);
 
-let obj = {
-  name: "Muzaffar",
-  age: 25,
-  address: "aalikadal",
-  emaila: "mehranbhat@gmail.com",
-};
-let { name, age, address, emaila } = obj;
-console.log(name);
+three();
+four();
+five();
+six();
+seven();
