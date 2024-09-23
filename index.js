@@ -1828,32 +1828,46 @@ function one(callback) {
     callback();
   }, 3000);
 }
-function two() {
+function two(call) {
   console.log("Two");
+  call();
 }
-function three() {
+function three(call) {
   console.log("Three");
+  call();
 }
-function four() {
+function four(cal) {
   setTimeout(() => {
     console.log("Four");
+    cal();
   }, 6000);
 }
-function five() {
+function five(cab) {
   setTimeout(() => {
     console.log("Five");
+    cab();
   }, 4000);
 }
-function six() {
+function six(cc) {
   console.log("Six");
+  cc();
 }
-function seven() {
+function seven(cc) {
   console.log("Seven");
+  cc();
 }
-one(two);
-
-three();
-four();
-five();
-six();
-seven();
+one(() => {
+  two(() => {
+    three(() => {
+      four(() => {
+        five(() => {
+          six(() => {
+            seven(() => {
+              console.log("All done");
+            });
+          });
+        });
+      });
+    });
+  });
+});
