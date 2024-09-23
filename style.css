@@ -37,7 +37,7 @@ a:active {
 } */
 
 /* //key logger project */
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +104,7 @@ a:active {
   font-size: 40px;
   font-weight: 700;
   color: blue;
-}
+} */
 .toggle {
   text-decoration: line-through;
   color: rgb(181, 85, 85);

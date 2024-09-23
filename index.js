@@ -1780,53 +1780,51 @@
 //
 //
 //
-let input = document.getElementById("inp");
-let butn = document.getElementById("btn");
-let list = document.getElementById("list");
-let arr = [];
-reload();
-butn.addEventListener("click", addTask);
+// let input = document.getElementById("inp");
+// let butn = document.getElementById("btn");
+// let list = document.getElementById("list");
+// butn.addEventListener("click", addTodo);
+// load();
+// function addTodo() {
+//   let task = input.value;
+//   if (task) {
+//     createlist(task);
+//   } else {
+//     alert("Please select a task");
+//   }
+//   input.value = "";
+//   saveLocal();
+// }
+// function createlist(task) {
+//   let li = document.createElement("li");
+//   let del = document.createElement("button");
+//   li.innerHTML = task;
+//   del.innerHTML = "Delete";
+//   list.appendChild(li);
+//   li.appendChild(del);
+//   del.addEventListener("click", function () {
+//     list.removeChild(li);
+//     saveLocal();
+//   });
+//   li.addEventListener("click", function () {
+//     this.classList.toggle("toggle");
+//   });
+// }
+// function saveLocal() {
+//   let arr = [];
+//   list.querySelectorAll("li").forEach((ele) => {
+//     arr.push(ele.innerText.replace("Delete", ""));
+//   });
+//   localStorage.setItem("todo-list", JSON.stringify(arr));
+// }
+// function load() {
+//   let load = JSON.parse(localStorage.getItem("todo-list"));
+//   load.forEach(createlist);
+// }
 
-function addTask() {
-  let task = input.value;
-  if (task) {
-    createelement(task);
-  } else {
-    alert("Please Enter the Task");
-  }
-  if (arr.includes(task)) {
-    alert("Task already exists");
-    return;
-  }
-  input.value = "";
-  saveToLocal();
-}
-function createelement(task) {
-  let li = document.createElement("li");
-  let del = document.createElement("button");
-  li.innerHTML = task;
-  del.innerHTML = "Delete";
-  list.appendChild(li);
-  li.appendChild(del);
-  li.addEventListener("click", function () {
-    this.classList.toggle("toggle");
-  });
+let arr = ["mehran", "muzaffar", "male", 23, "kashmir", "haha"];
 
-  del.addEventListener("click", function () {
-    list.removeChild(li);
-    saveToLocal();
-  });
-  arr.push(task);
-}
-
-function saveToLocal() {
-  let arr = [];
-  list.querySelectorAll("li").forEach((ele) => {
-    arr.push(ele.innerText.replace("Delete", ""));
-  });
-  localStorage.setItem("todo-data", JSON.stringify(arr));
-}
-function reload() {
-  let task = JSON.parse(localStorage.getItem("todo-data"));
-  task.forEach(createelement);
-}
+let arr2 = [...arr];
+arr.push("pushed");
+console.log(arr);
+console.log(arr2);
