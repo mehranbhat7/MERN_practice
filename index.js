@@ -1821,10 +1821,22 @@
 //   let load = JSON.parse(localStorage.getItem("todo-list"));
 //   load.forEach(createlist);
 // }
-let api = async () => {
-  const result = await fetch("https://jsonplaceholder.typicode.com/posts");
-  console.log(result);
-  let resp = await result.json();
-  console.log(resp);
+
+let fake = {
+  body: "aaj blue hai pani pani aur dil bhi sunny sunny aajao on the beach yaar photo meri kheech yaar",
+  title: "honey singh ",
+  userid: 1,
 };
-api();
+
+let data = async () => {
+  let response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify(fake),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  let datas = await response.json();
+  console.log(datas);
+};
+data();
