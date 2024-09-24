@@ -1822,41 +1822,17 @@
 //   load.forEach(createlist);
 // }
 
-let input = document.getElementById("inp");
-let btn = document.getElementById("btn");
-let list = document.getElementById("list");
-btn.addEventListener("click", addList);
-load();
-function addList() {
-  let task = input.value;
-  if (task) {
-    createelement(task);
-  } else {
-    alert("Please enter a task");
-  }
-  input.value = "";
-  saveLocal();
+function api() {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => {
+      console.log(res);
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
-function createelement(task) {
-  let li = document.createElement("li");
-  let del = document.createElement("button");
-  li.innerHTML = task;
-  del.innerHTML = "Delete";
-  list.appendChild(li);
-  li.appendChild(del);
-  del.addEventListener("click", function () {
-    list.removeChild(li);
-    saveLocal();
-  });
-}
-function saveLocal() {
-  let arr = [];
-  list.querySelectorAll("li").forEach((ele) => {
-    arr.push(ele.innerHTML.replace("Delete", ""));
-  });
-  localStorage.setItem("tasks", JSON.stringify(arr));
-}
-function load() {
-  let load = JSON.parse(localStorage.getItem("tasks"));
-  load.forEach(createelement);
-}
+api();
