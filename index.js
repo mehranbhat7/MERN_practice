@@ -1821,17 +1821,10 @@
 //   let load = JSON.parse(localStorage.getItem("todo-list"));
 //   load.forEach(createlist);
 // }
-fetch("https://jsonplaceholder.typicode.com/posts")
-  .then((res, rej) => {
-    if (!res.ok) {
-      throw new Error("Network response was not ok");
-    } else {
-      return res.json();
-    }
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+let api = async () => {
+  const result = await fetch("https://jsonplaceholder.typicode.com/posts");
+  console.log(result);
+  let resp = await result.json();
+  console.log(resp);
+};
+api();
