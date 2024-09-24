@@ -1822,21 +1822,11 @@
 //   load.forEach(createlist);
 // }
 
-let fake = {
-  body: "aaj blue hai pani pani aur dil bhi sunny sunny aajao on the beach yaar photo meri kheech yaar",
-  title: "honey singh ",
-  userid: 1,
-};
-
 let data = async () => {
-  let response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    body: JSON.stringify(fake),
-    headers: {
-      "Content-Type": "application/json",
-    },
+  let response = await fetch("https://jsonplaceholder.typicode.com/posts/9", {
+    method: "DELETE",
   });
-  let datas = await response.json();
-  console.log(datas);
+  let data = await response.json();
+  console.log(data);
 };
 data();
