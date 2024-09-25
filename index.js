@@ -1822,11 +1822,20 @@
 //   load.forEach(createlist);
 // }
 
-let data = async () => {
-  let response = await fetch("https://jsonplaceholder.typicode.com/posts/9", {
-    method: "DELETE",
-  });
-  let data = await response.json();
-  console.log(data);
+let data = async (call) => {
+  let response = await fetch("https://jsonplaceholder.typicode.com/photos");
+  let result = await response.json();
+  console.log(result);
+  call(result);
 };
-data();
+data(abcx);
+
+function abcx(result) {
+  let root = document.getElementById("root");
+  result.forEach((ele) => {
+    let list = document.createElement("div");
+    list.innerHTML = `<h1>${ele.url}</h1>
+    <h4>${ele.thumbnailUrl}</h4>`;
+    root.appendChild(list);
+  });
+}
