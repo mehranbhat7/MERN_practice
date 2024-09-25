@@ -105,11 +105,6 @@ a:active {
   font-weight: 700;
   color: blue;
 } */
-.toggle {
-  text-decoration: line-through;
-  color: rgb(181, 85, 85);
-  font-weight: 600;
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -118,93 +113,83 @@ a:active {
 }
 
 body {
-  background-color: #f4f4f9;
+  background-color: #f5f5f5;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Style for each card */
+/* Card container styling */
 .card {
-  width: 300px;
-  background-color: white;
-  border: 1px solid #e0e0e0;
+  width: 18rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 15px;
-  padding: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Elevates the card slightly on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Image inside the card */
+/* Image styling */
 .card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0; /* Rounded top corners */
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Card body styling */
+.card-body {
+  padding: 15px;
 }
 
 /* Title styling */
-.card h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
   color: #333;
 }
 
-/* Category */
-.card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-/* Price styling */
-.price {
-  font-size: 1.2rem;
-  color: #007bff;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-/* Rating styling */
-.rating {
-  color: #ffa500;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-/* Description styling */
-.description {
+/* Text styling */
+.card-text {
   font-size: 0.95rem;
-  color: #666;
+  color: #555;
   margin-bottom: 15px;
+  line-height: 1.4;
+  height: 60px; /* Control description height */
+  overflow: hidden; /* Hide overflow of long text */
+  text-overflow: ellipsis; /* Add ellipsis to indicate more text */
 }
 
-/* Add to Cart button */
-.card button {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
   color: white;
+  background-color: #007bff;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.card button:hover {
-  background-color: #218838; /* Darker green on hover */
+.btn:hover {
+  background-color: #0056b3;
 }
 
-/* Flex container for card layout */
+/* Flexbox container for layout */
 #root {
   display: flex;
   flex-wrap: wrap;

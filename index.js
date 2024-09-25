@@ -1824,28 +1824,24 @@
 
 let data = async (call) => {
   let response = await fetch("https://fakestoreapi.com/products");
-  let result = await response.json();
-  console.log(result);
-  call(result);
+  let products = await response.json();
+  console.log(products);
+  call(products);
 };
-data(abcx);
+data(Ecommerce);
 
-function abcx(result) {
-  let root = document.getElementById("root");
-  result.forEach((ele) => {
+function Ecommerce(products) {
+  products.forEach((ele) => {
     let list = document.createElement("div");
-    list.classList.add("card");
-    list.innerHTML = `<img src="${ele.image}" alt="${ele.title}" />
-    <div class="details">
-      <h3>${ele.title}</h3>
-      <p>Category: ${ele.category}</p>
-      <p class="description">${ele.description.slice(0, 100)}...</p>
-      <p class="price">Price: $${ele.price}</p>
-      <p class="rating">Rating: ⭐${ele.rating.rate} (${
-      ele.rating.count
-    } reviews)</p>
-    <button>Add to Cart</button>
-    </div>`;
+    list.innerHTML = `<div class="card" style="width: 18rem;">
+  <img src=${ele.image} class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${ele.title.substring(0, 20)}...</h5>
+    <p class="card-text">${ele.description.substring(0, 60)}...</p>
+    <a href="#" class="btn btn-primary">ADD TO CART</a>
+  </div>
+ </div>`;
+    let root = document.getElementById("root");
     root.appendChild(list);
   });
 }
