@@ -1823,7 +1823,7 @@
 // }
 
 let data = async (call) => {
-  let response = await fetch("https://jsonplaceholder.typicode.com/photos");
+  let response = await fetch("https://fakestoreapi.com/products");
   let result = await response.json();
   console.log(result);
   call(result);
@@ -1834,8 +1834,18 @@ function abcx(result) {
   let root = document.getElementById("root");
   result.forEach((ele) => {
     let list = document.createElement("div");
-    list.innerHTML = `<h1>${ele.url}</h1>
-    <h4>${ele.thumbnailUrl}</h4>`;
+    list.classList.add("card");
+    list.innerHTML = `<img src="${ele.image}" alt="${ele.title}" />
+    <div class="details">
+      <h3>${ele.title}</h3>
+      <p>Category: ${ele.category}</p>
+      <p class="description">${ele.description.slice(0, 100)}...</p>
+      <p class="price">Price: $${ele.price}</p>
+      <p class="rating">Rating: ⭐${ele.rating.rate} (${
+      ele.rating.count
+    } reviews)</p>
+    <button>Add to Cart</button>
+    </div>`;
     root.appendChild(list);
   });
 }
