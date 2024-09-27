@@ -1822,26 +1822,58 @@
 //   load.forEach(createlist);
 // }
 
-let data = async (call) => {
-  let response = await fetch("https://fakestoreapi.com/products");
-  let products = await response.json();
-  console.log(products);
-  call(products);
-};
-data(Ecommerce);
+// let data = async (callback) => {
+//   let response = await fetch("https://fakestoreapi.com/products");
+//   let product = await response.json();
+//   console.log(product);
+//   callback(product);
+// };
+// data(store);
 
-function Ecommerce(products) {
-  products.forEach((ele) => {
-    let list = document.createElement("div");
-    list.innerHTML = `<div class="card" style="width: 18rem;">
-  <img src=${ele.image} class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${ele.title.substring(0, 20)}...</h5>
-    <p class="card-text">${ele.description.substring(0, 60)}...</p>
-    <a href="#" class="btn btn-primary">ADD TO CART</a>
-  </div>
- </div>`;
-    let root = document.getElementById("root");
-    root.appendChild(list);
-  });
+// function store(product) {
+//   product.forEach((ele) => {
+//     let list = document.createElement("div");
+//     list.innerHTML = `<div class="card" style="width: 18rem;">
+//     <img src=${ele.image} class="card-img-top" alt="...">
+//     <div class="card-body">
+//       <h5 class="card-title">${ele.title.substring(0, 20)}...</h5>
+//       <p class="card-text">${ele.description.substring(0, 50)}...</p>
+//       <h3 class="price">$${ele.price}</h3>
+//       <a href="#" class="btn btn-primary">ADD TO CART</a>
+//     </div>
+//   </div>`;
+//     let root = document.getElementById("root");
+//     root.appendChild(list);
+//   });
+// }
+
+//
+//
+//
+///
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+//
+
+let input = document.getElementById("inp");
+let butn = document.getElementById("btn");
+let list = document.getElementById("list");
+butn.addEventListener("click", addTask);
+function addTask() {
+  let task = input.value;
+  if (!task) {
+    alert("Please enter a task");
+  } else {
+    createList(task);
+  }
 }

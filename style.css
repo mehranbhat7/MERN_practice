@@ -195,3 +195,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.price {
+  color: green;
+  font-weight: 600;
+  
+}
