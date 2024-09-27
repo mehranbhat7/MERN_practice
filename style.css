@@ -198,5 +198,7 @@ body {
 .price {
   color: green;
   font-weight: 600;
-  
+}
+.toggle {
+  text-decoration: line-through;
 }

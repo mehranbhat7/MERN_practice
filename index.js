@@ -1887,12 +1887,15 @@ function addTask() {
 }
 
 function createList(task) {
+  let checbox = document.createElement("input");
   let li = document.createElement("li");
   let del = document.createElement("button");
   let edit = document.createElement("button");
+  checbox.type = "checkbox";
   li.textContent = task;
   del.textContent = "Delete";
   edit.textContent = "Edit";
+  li.prepend(checbox);
   list.appendChild(li);
   li.appendChild(del);
   li.appendChild(edit);
@@ -1905,6 +1908,13 @@ function createList(task) {
     if (edited) {
       li.innerHTML = edited;
       save();
+    }
+  });
+  checbox.addEventListener("click", function () {
+    if (checbox.checked) {
+      li.classList.toggle("toggle");
+    } else {
+      li.classList.remove("toggle");
     }
   });
 }
