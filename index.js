@@ -1869,11 +1869,54 @@ let input = document.getElementById("inp");
 let butn = document.getElementById("btn");
 let list = document.getElementById("list");
 butn.addEventListener("click", addTask);
+reload();
 function addTask() {
   let task = input.value;
   if (!task) {
     alert("Please enter a task");
   } else {
-    createList(task);
+    let existingTodos = JSON.parse(localStorage.getItem("todo")) || [];
+    if (existingTodos.includes(task)) {
+      alert("Task already exists");
+    } else {
+      createList(task);
+      save();
+      input.value = "";
+    }
   }
+}
+
+function createList(task) {
+  let li = document.createElement("li");
+  let del = document.createElement("button");
+  let edit = document.createElement("button");
+  li.textContent = task;
+  del.textContent = "Delete";
+  edit.textContent = "Edit";
+  list.appendChild(li);
+  li.appendChild(del);
+  li.appendChild(edit);
+  del.addEventListener("click", function () {
+    list.removeChild(li);
+    save();
+  });
+  edit.addEventListener("click", function () {
+    let edited = prompt("enter edited task");
+    if (edited) {
+      li.innerHTML = edited;
+      save();
+    }
+  });
+}
+
+function save() {
+  let arr = [];
+  list.querySelectorAll("li").forEach((ele) => {
+    arr.push(ele.innerText.replace("DeleteEdit", ""));
+  });
+  localStorage.setItem("todo", JSON.stringify(arr));
+}
+function reload() {
+  let task = JSON.parse(localStorage.getItem("todo"));
+  task.forEach(createList);
 }
