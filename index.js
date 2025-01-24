@@ -1932,13 +1932,20 @@
 // }
 // console.log('ifghgs');
 
-let arr = [23, 65, 87, 24, 54, 98, 70, 13];
-let target = 87;
-function abc(n, m) {
-  let rse = n.filter(ele => {
-    return ele != m;
-  });
-  return rse;
+let arr = [20, 50, 90, 30, 10, 60];
+
+function abc(n) {
+  for (let i = 0; i < n.length; i++) {
+    for (let j = 0; j < n.length; j++) {
+      if (n[j] > n[j + 1]) {
+        [n[j], n[j + 1]] = [n[j + 1], n[j]];
+      }
+    }
+  }
+  for (let i = 0; i < n.length; i++) {
+    if (i === n.length - 2) {
+      return n[i];
+    }
+  }
 }
-console.log(abc(arr, target));
-console.log(arr);
+console.log(abc(arr));
