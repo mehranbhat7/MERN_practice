@@ -1865,68 +1865,69 @@
 //
 //
 
-let input = document.getElementById("inp");
-let butn = document.getElementById("btn");
-let list = document.getElementById("list");
-butn.addEventListener("click", addTask);
+let input = document.getElementById('inp');
+let butn = document.getElementById('btn');
+let list = document.getElementById('list');
+butn.addEventListener('click', addTask);
 reload();
 function addTask() {
   let task = input.value;
   if (!task) {
-    alert("Please enter a task");
+    alert('Please enter a task');
   } else {
-    let existingTodos = JSON.parse(localStorage.getItem("todo")) || [];
+    let existingTodos = JSON.parse(localStorage.getItem('todo')) || [];
     if (existingTodos.includes(task)) {
-      alert("Task already exists");
+      alert('Task already exists');
     } else {
       createList(task);
       save();
-      input.value = "";
+      input.value = '';
     }
   }
 }
 
 function createList(task) {
-  let checbox = document.createElement("input");
-  let li = document.createElement("li");
-  let del = document.createElement("button");
-  let edit = document.createElement("button");
-  checbox.type = "checkbox";
+  let checbox = document.createElement('input');
+  let li = document.createElement('li');
+  let del = document.createElement('button');
+  let edit = document.createElement('button');
+  checbox.type = 'checkbox';
   li.textContent = task;
-  del.textContent = "Delete";
-  edit.textContent = "Edit";
+  del.textContent = 'Delete';
+  edit.textContent = 'Edit';
   li.prepend(checbox);
   list.appendChild(li);
   li.appendChild(del);
   li.appendChild(edit);
-  del.addEventListener("click", function () {
+  del.addEventListener('click', function () {
     list.removeChild(li);
     save();
   });
-  edit.addEventListener("click", function () {
-    let edited = prompt("enter edited task");
+  edit.addEventListener('click', function () {
+    let edited = prompt('enter edited task');
     if (edited) {
       li.innerHTML = edited;
       save();
     }
   });
-  checbox.addEventListener("click", function () {
+  checbox.addEventListener('click', function () {
     if (checbox.checked) {
-      li.classList.toggle("toggle");
+      li.classList.toggle('toggle');
     } else {
-      li.classList.remove("toggle");
+      li.classList.remove('toggle');
     }
   });
 }
 
 function save() {
   let arr = [];
-  list.querySelectorAll("li").forEach((ele) => {
-    arr.push(ele.innerText.replace("DeleteEdit", ""));
+  list.querySelectorAll('li').forEach(ele => {
+    arr.push(ele.innerText.replace('DeleteEdit', ''));
   });
-  localStorage.setItem("todo", JSON.stringify(arr));
+  localStorage.setItem('todo', JSON.stringify(arr));
 }
 function reload() {
-  let task = JSON.parse(localStorage.getItem("todo"));
+  let task = JSON.parse(localStorage.getItem('todo'));
   task.forEach(createList);
 }
+console.log('ifghgs');
