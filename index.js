@@ -1865,69 +1865,92 @@
 //
 //
 
-let input = document.getElementById('inp');
-let butn = document.getElementById('btn');
-let list = document.getElementById('list');
-butn.addEventListener('click', addTask);
-reload();
-function addTask() {
-  let task = input.value;
-  if (!task) {
-    alert('Please enter a task');
-  } else {
-    let existingTodos = JSON.parse(localStorage.getItem('todo')) || [];
-    if (existingTodos.includes(task)) {
-      alert('Task already exists');
-    } else {
-      createList(task);
-      save();
-      input.value = '';
-    }
+// let input = document.getElementById('inp');
+// let butn = document.getElementById('btn');
+// let list = document.getElementById('list');
+// butn.addEventListener('click', addTask);
+// reload();
+// function addTask() {
+//   let task = input.value;
+//   if (!task) {
+//     alert('Please enter a task');
+//   } else {
+//     let existingTodos = JSON.parse(localStorage.getItem('todo')) || [];
+//     if (existingTodos.includes(task)) {
+//       alert('Task already exists');
+//     } else {
+//       createList(task);
+//       save();
+//       input.value = '';
+//     }
+//   }
+// }
+
+// function createList(task) {
+//   let checbox = document.createElement('input');
+//   let li = document.createElement('li');
+//   let del = document.createElement('button');
+//   let edit = document.createElement('button');
+//   checbox.type = 'checkbox';
+//   li.textContent = task;
+//   del.textContent = 'Delete';
+//   edit.textContent = 'Edit';
+//   li.prepend(checbox);
+//   list.appendChild(li);
+//   li.appendChild(del);
+//   li.appendChild(edit);
+//   del.addEventListener('click', function () {
+//     list.removeChild(li);
+//     save();
+//   });
+//   edit.addEventListener('click', function () {
+//     let edited = prompt('enter edited task');
+//     if (edited) {
+//       li.innerHTML = edited;
+//       save();
+//     }
+//   });
+//   checbox.addEventListener('click', function () {
+//     if (checbox.checked) {
+//       li.classList.toggle('toggle');
+//     } else {
+//       li.classList.remove('toggle');
+//     }
+//   });
+// }
+
+// function save() {
+//   let arr = [];
+//   list.querySelectorAll('li').forEach(ele => {
+//     arr.push(ele.innerText.replace('DeleteEdit', ''));
+//   });
+//   localStorage.setItem('todo', JSON.stringify(arr));
+// }
+// function reload() {
+//   let task = JSON.parse(localStorage.getItem('todo'));
+//   task.forEach(createList);
+// }
+// console.log('ifghgs');
+
+let arr = [10, 20, 30, 40];
+
+function abc(n) {
+  let sum = 0;
+  for (let i = 0; i < n.length; i++) {
+    sum = sum + n[i];
   }
+  return sum;
 }
+console.log(abc(arr));
 
-function createList(task) {
-  let checbox = document.createElement('input');
-  let li = document.createElement('li');
-  let del = document.createElement('button');
-  let edit = document.createElement('button');
-  checbox.type = 'checkbox';
-  li.textContent = task;
-  del.textContent = 'Delete';
-  edit.textContent = 'Edit';
-  li.prepend(checbox);
-  list.appendChild(li);
-  li.appendChild(del);
-  li.appendChild(edit);
-  del.addEventListener('click', function () {
-    list.removeChild(li);
-    save();
-  });
-  edit.addEventListener('click', function () {
-    let edited = prompt('enter edited task');
-    if (edited) {
-      li.innerHTML = edited;
-      save();
-    }
-  });
-  checbox.addEventListener('click', function () {
-    if (checbox.checked) {
-      li.classList.toggle('toggle');
-    } else {
-      li.classList.remove('toggle');
-    }
-  });
-}
+let car = {
+  name: 'maruti',
+  model: 2021,
+  color: 'silver',
+};
 
-function save() {
-  let arr = [];
-  list.querySelectorAll('li').forEach(ele => {
-    arr.push(ele.innerText.replace('DeleteEdit', ''));
-  });
-  localStorage.setItem('todo', JSON.stringify(arr));
-}
-function reload() {
-  let task = JSON.parse(localStorage.getItem('todo'));
-  task.forEach(createList);
-}
-console.log('ifghgs');
+car.start = function () {
+  console.log('hun hun hu8nnnnn');
+};
+
+console.log(car.start());
