@@ -1932,25 +1932,11 @@
 // }
 // console.log('ifghgs');
 
-let arr = [10, 20, 30, 40];
-
-function abc(n) {
-  let sum = 0;
-  for (let i = 0; i < n.length; i++) {
-    sum = sum + n[i];
-  }
-  return sum;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function even(n) {
+  let res = n.filter(ele => {
+    return ele % 2 === 0;
+  });
+  return res;
 }
-console.log(abc(arr));
-
-let car = {
-  name: 'maruti',
-  model: 2021,
-  color: 'silver',
-};
-
-car.start = function () {
-  console.log('hun hun hu8nnnnn');
-};
-
-console.log(car.start());
+console.log(even(arr));
