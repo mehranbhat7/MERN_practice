@@ -1932,11 +1932,13 @@
 // }
 // console.log('ifghgs');
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-function even(n) {
-  let res = n.filter(ele => {
-    return ele % 2 === 0;
+let arr = [23, 65, 87, 24, 54, 98, 70, 13];
+let target = 87;
+function abc(n, m) {
+  let rse = n.filter(ele => {
+    return ele != m;
   });
-  return res;
+  return rse;
 }
-console.log(even(arr));
+console.log(abc(arr, target));
+console.log(arr);
