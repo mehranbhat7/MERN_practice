@@ -1959,17 +1959,30 @@
 // }
 // console.log(fib(10, 3));
 
-let arr = [10, 50, 60, 30, 10, 20, 50, 80, 40, 30, 20];
+// let arr = [10, 50, 60, 30, 10, 20, 50, 80, 40, 30, 20];
+// function abc(n) {
+//   let res = [];
+//   let del = [];
+//   for (let i = 0; i < n.length; i++) {
+//     if (res.includes(n[i])) {
+//       del.push(n[i]);
+//     } else {
+//       res.push(n[i]);
+//     }
+//   }
+//   return del;
+// }
+// console.log(abc(arr));
+
+let arr = [5, 3, 1, 7, 4, 2, 6, 9, 8];
 function abc(n) {
-  let res = [];
-  let del = [];
   for (let i = 0; i < n.length; i++) {
-    if (res.includes(n[i])) {
-      del.push(n[i]);
-    } else {
-      res.push(n[i]);
+    for (let j = 0; j <= n.length; j++) {
+      if (n[j] > n[j + 1]) {
+        [n[j], n[j + 1]] = [n[j + 1], n[j]];
+      }
     }
   }
-  return del;
+  return n[n.length - 2];
 }
 console.log(abc(arr));
