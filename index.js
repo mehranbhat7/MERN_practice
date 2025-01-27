@@ -1932,20 +1932,44 @@
 // }
 // console.log('ifghgs');
 
-let arr = [20, 50, 90, 30, 10, 60];
+// let arr = [10, 30, 50, 60, 90];
+// function abc(l, n) {
+//   let res = Array(n).fill(1);
+//   for (let i = n; i < l; i++) {
+//     let sum = 0;
+//     for (let j = 0; j < n; j++) {
+//       sum = sum + res[i - j];
+//     }
+//     res.push(sum);
+//   }
+//   return res;
+// }
+// console.log(abc(10, 2));
 
+// function fib(l, n) {
+//   let sum = Array(n).fill(1);
+//   for (let i = n; i < l; i++) {
+//     let total = 0;
+//     for (let j = 1; j <= n; j++) {
+//       total = total + sum[i - j];
+//     }
+//     sum.push(total);
+//   }
+//   return sum;
+// }
+// console.log(fib(10, 3));
+
+let arr = [10, 50, 60, 30, 10, 20, 50, 80, 40, 30, 20];
 function abc(n) {
+  let res = [];
+  let del = [];
   for (let i = 0; i < n.length; i++) {
-    for (let j = 0; j < n.length; j++) {
-      if (n[j] > n[j + 1]) {
-        [n[j], n[j + 1]] = [n[j + 1], n[j]];
-      }
+    if (res.includes(n[i])) {
+      del.push(n[i]);
+    } else {
+      res.push(n[i]);
     }
   }
-  for (let i = 0; i < n.length; i++) {
-    if (i === n.length - 2) {
-      return n[i];
-    }
-  }
+  return del;
 }
 console.log(abc(arr));
