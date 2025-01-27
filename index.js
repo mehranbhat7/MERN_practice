@@ -1974,15 +1974,28 @@
 // }
 // console.log(abc(arr));
 
-let arr = [5, 3, 1, 7, 4, 2, 6, 9, 8];
+// let arr = [5, 3, 1, 7, 4, 2, 6, 9, 8];
+// function abc(n) {
+//   for (let i = 0; i < n.length; i++) {
+//     for (let j = 0; j <= n.length; j++) {
+//       if (n[j] > n[j + 1]) {
+//         [n[j], n[j + 1]] = [n[j + 1], n[j]];
+//       }
+//     }
+//   }
+//   return n[n.length - 2];
+// }
+// console.log(abc(arr));
+
+let arr = [1, 2, 3, 4, 5, 6];
 function abc(n) {
-  for (let i = 0; i < n.length; i++) {
-    for (let j = 0; j <= n.length; j++) {
-      if (n[j] > n[j + 1]) {
-        [n[j], n[j + 1]] = [n[j + 1], n[j]];
-      }
-    }
+  if (n.length % 2 != 0) {
+    let res = (n.length - 1) / 2;
+    return n[res];
+  } else {
+    let v1 = n.length / 2 - 1;
+    let v2 = n.length / 2;
+    return n[v1] + n[v2];
   }
-  return n[n.length - 2];
 }
 console.log(abc(arr));
