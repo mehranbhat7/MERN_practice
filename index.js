@@ -2011,17 +2011,28 @@
 // }
 // console.log(abc(arr));
 
-let strs = ['flower', 'flow', 'flwight'];
-function prfx(n) {
-  let res = n.sort();
-  let ist = res[0];
-  let lst = res[res.length - 1];
-  let ans = '';
-  for (let i = 0; i < ist.length; i++) {
-    if (ist[i] === lst[i]) {
-      ans = ans + ist[i];
+// let strs = 'mehran';
+// function prfx(n) {
+//   let res = n.split('');
+//   for (let i = 0; i < res.length; i++) {
+//     for (let j = 0; j < res.length; j++) {
+//       if (res[j] > res[j + 1]) {
+//         [res[j], res[j + 1]] = [res[j + 1], res[j]];
+//       }
+//     }
+//   }
+//   return res.join('');
+// }
+// console.log(prfx(strs));
+
+let str1 = 'leetcode';
+let str2 = 'leeto';
+function htc(n, m) {
+  for (let i = 0; i < n.length; i++) {
+    if (m.includes(n[i])) {
+      return i;
     }
   }
-  return ans;
+  return -1;
 }
-console.log(prfx(strs));
+console.log(htc(str1, str2));
