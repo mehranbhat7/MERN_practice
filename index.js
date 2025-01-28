@@ -1987,15 +1987,41 @@
 // }
 // console.log(abc(arr));
 
-let arr = [1, 2, 3, 4, 5, 6];
-function abc(n) {
-  if (n.length % 2 != 0) {
-    let res = (n.length - 1) / 2;
-    return n[res];
-  } else {
-    let v1 = n.length / 2 - 1;
-    let v2 = n.length / 2;
-    return n[v1] + n[v2];
+// let arr = [1, 2, 3, 4, 5, 6];
+// function abc(n) {
+//   if (n.length % 2 != 0) {
+//     let res = (n.length - 1) / 2;
+//     return n[res];
+//   } else {
+//     let v1 = n.length / 2 - 1;
+//     let v2 = n.length / 2;
+//     return n[v1] + n[v2];
+//   }
+// }
+// console.log(abc(arr));
+// let arr = [1, 1, 1, 2, 2, 1, 2, 2, 2];
+// function abc(n) {
+//   let count = {};
+//   for (let i = 0; i < n.length; i++) {
+//     count[n[i]] = (count[n[i]] || 0) + 1;
+//     if (count[n[i]] >= n.length / 2) {
+//       return n[i];
+//     }
+//   }
+// }
+// console.log(abc(arr));
+
+let strs = ['flower', 'flow', 'flwight'];
+function prfx(n) {
+  let res = n.sort();
+  let ist = res[0];
+  let lst = res[res.length - 1];
+  let ans = '';
+  for (let i = 0; i < ist.length; i++) {
+    if (ist[i] === lst[i]) {
+      ans = ans + ist[i];
+    }
   }
+  return ans;
 }
-console.log(abc(arr));
+console.log(prfx(strs));
